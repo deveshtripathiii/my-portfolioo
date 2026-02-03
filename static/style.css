@@ -1,0 +1,304 @@
+/* =========================================
+   1. FONTS & BASIC SETUP
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default; /* Standard cursor */
+}
+
+body {
+    background-color: #000000; /* Pitch Black */
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    overflow-x: hidden; /* Horizontal scroll rokne ke liye */
+}
+
+a { 
+    color: #fff; 
+    text-decoration: none; 
+    cursor: pointer; /* Links par hand cursor */
+}
+
+/* =========================================
+   2. SPOTLIGHT (MOUSE GLOW) EFFECT
+   ========================================= */
+.cursor-glow {
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(29, 78, 216, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none; /* Click aar-paar ho sake */
+    z-index: -1;          /* Sabse peeche rahe */
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+}
+
+/* =========================================
+   3. NAVIGATION BAR
+   ========================================= */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px;
+    font-size: 1.1rem;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    letter-spacing: 1px;
+}
+
+.navbar a:hover {
+    color: #888;
+    transition: 0.3s;
+}
+
+/* =========================================
+   4. HERO SECTION (NAME & PHOTO)
+   ========================================= */
+.hero-section {
+    text-align: center;
+    padding-top: 140px;
+}
+
+/* --- Name Shimmer Effect --- */
+.hero-title {
+    font-size: clamp(5rem, 16vw, 13rem); /* Bahut bada font */
+    font-weight: 700;
+    letter-spacing: -4px;
+    line-height: 0.85;
+    margin-bottom: 10px;
+    
+    /* Chamakne wala animation */
+    background: linear-gradient(90deg, #ffffff, #555555, #ffffff);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+    0% { background-position: 200%; }
+    100% { background-position: -200%; }
+}
+
+.hero-subtitles {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 20px auto 40px;
+    font-size: 1.2rem;
+    padding: 0 20px;
+    color: #ccc;
+}
+
+/* --- PHOTO SETTINGS (IMPORTANT FIX) --- */
+.hero-image-container {
+    width: 100%;
+    height: 75vh;  /* Height badha di taaki photo lambi dikhe */
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        /* Box ko poora cover karega */
+    object-position: top center; /* CRITICAL FIX: Photo ko upar se align karega taaki sar na kate */
+}
+
+/* =========================================
+   5. SECTIONS COMMON STYLES
+   ========================================= */
+.section-pad {
+    padding: 120px 5%;
+}
+
+.section-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    margin-bottom: 60px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.section-title-center {
+    font-size: clamp(3rem, 8vw, 6rem);
+    text-align: center;
+    margin-bottom: 50px;
+    line-height: 1;
+}
+
+/* =========================================
+   6. PROJECTS GRID
+   ========================================= */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    filter: grayscale(100%); /* Black & White default */
+    transition: 0.3s;
+}
+
+.project-card:hover .project-image {
+    filter: grayscale(0%); /* Hover par color wapas aaye */
+}
+
+.project-title { font-size: 2rem; margin-bottom: 5px; }
+.project-category { color: #888; font-size: 1rem; letter-spacing: 1px; }
+
+/* =========================================
+   7. SKILLS SECTION
+   ========================================= */
+.skills-section {
+    background-color: #0a0a0a;
+    text-align: center;
+}
+
+.small-profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 40px;
+    border: 2px solid #333;
+}
+
+.skills-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.skill-tag {
+    padding: 15px 40px;
+    border: 1px solid #333;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* =========================================
+   8. ABOUT SECTION
+   ========================================= */
+.about-section {
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.bio-headline {
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin-bottom: 30px;
+    line-height: 1.1;
+}
+
+.bio-text {
+    font-size: 1.3rem;
+    color: #888;
+    text-transform: none; /* Lowercase allowed for reading */
+    line-height: 1.6;
+    font-family: sans-serif;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* =========================================
+   9. FOOTER SECTION
+   ========================================= */
+.footer-section {
+    background-color: #050505;
+    padding: 100px 5% 40px;
+}
+
+.footer-title {
+    font-size: clamp(4rem, 12vw, 9rem);
+    text-align: center;
+    margin-bottom: 80px;
+    color: #fff;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    gap: 50px;
+}
+
+.email-link, .social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links p {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.big-link {
+    display: block;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    margin-bottom: 10px;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.big-link:hover {
+    color: #666;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    border-top: 1px solid #222;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   10. MOBILE RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+    .navbar { font-size: 0.8rem; gap: 20px; }
+    .hero-title { letter-spacing: -2px; }
+    .hero-subtitles { flex-direction: column; gap: 10px; }
+    .hero-image-container { height: 60vh; } /* Mobile par thoda chhota */
+    .projects-grid { grid-template-columns: 1fr; }
+    .footer-links { flex-direction: column; gap: 40px; }
+    .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+}

@@ -35,6 +35,18 @@
             opacity: 0;
             pointer-events: none;
         }
+        
+        /* Link Styles for Cards */
+        .project-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: transform 0.2s ease;
+        }
+        .project-link:hover {
+            transform: scale(1.02);
+            opacity: 0.9;
+        }
     </style>
 </head>
 <body>
@@ -70,18 +82,33 @@
     <section id="projects" class="section-pad">
         <h2 class="section-title">SELECT PROJECTS</h2>
         <div class="projects-grid">
-            {% for project in user.projects %}
-            <div class="project-card">
-                <img src="{{ url_for('static', filename=project.image) }}" 
-                     onerror="this.src='https://via.placeholder.com/600x400/333/fff?text={{ project.title }}'" 
-                     alt="{{ project.title }}" 
-                     class="project-image">
-                <div class="project-info">
-                    <h3 class="project-title">{{ project.title }}</h3>
-                    <p class="project-category">{{ project.category }}</p>
+            
+            <a href="https://github.com/deveshtripathiii/PDF-Summarizer" target="_blank" class="project-link">
+                <div class="project-card">
+                    <img src="{{ url_for('static', filename='project1.png') }}" 
+                         onerror="this.src='https://via.placeholder.com/600x400/333/fff?text=PDF+Summarizer'" 
+                         alt="PDF Summarizer" 
+                         class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">PDF Summarizer</h3>
+                        <p class="project-category">Python / AI</p>
+                    </div>
                 </div>
-            </div>
-            {% endfor %}
+            </a>
+
+            <a href="https://github.com/deveshtripathiii/Nutrition-App" target="_blank" class="project-link">
+                <div class="project-card">
+                    <img src="{{ url_for('static', filename='project2.png') }}" 
+                         onerror="this.src='https://via.placeholder.com/600x400/333/fff?text=Nutrition+App'" 
+                         alt="Nutrition App" 
+                         class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Nutrition App</h3>
+                        <p class="project-category">Health / App Dev</p>
+                    </div>
+                </div>
+            </a>
+
         </div>
     </section>
 

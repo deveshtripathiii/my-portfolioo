@@ -18,7 +18,7 @@
             top: 0; left: 0;
             width: 100%; height: 100%;
             background-color: #000;
-            z-index: 9999; /* Sabse upar */
+            z-index: 9999;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -36,7 +36,7 @@
             pointer-events: none;
         }
         
-        /* Link Styles for Cards */
+        /* Link Styles */
         .project-link {
             text-decoration: none;
             color: inherit;
@@ -83,32 +83,31 @@
         <h2 class="section-title">SELECT PROJECTS</h2>
         <div class="projects-grid">
             
-            <a href="https://github.com/deveshtripathiii/PDF-Summarizer" target="_blank" class="project-link">
-                <div class="project-card">
-                    <img src="{{ url_for('static', filename='project1.png') }}" 
-                         onerror="this.src='https://via.placeholder.com/600x400/333/fff?text=PDF+Summarizer'" 
-                         alt="PDF Summarizer" 
-                         class="project-image">
-                    <div class="project-info">
-                        <h3 class="project-title">PDF Summarizer</h3>
-                        <p class="project-category">Python / AI</p>
+            {% for project in user.projects %}
+            
+                {% set link = "#" %}
+                
+                {% if "PDF Summarizer" in project.title %}
+                    {% set link = "https://github.com/deveshtripathiii/PDF-Summarizer" %}
+                {% elif "Nutrition" in project.title %}
+                    {% set link = "https://github.com/deveshtripathiii/Nutrition-App" %}
+                {% endif %}
+                
+                <a href="{{ link }}" target="_blank" class="project-link">
+                    <div class="project-card">
+                        <img src="{{ url_for('static', filename=project.image) }}" 
+                             onerror="this.src='https://via.placeholder.com/600x400/333/fff?text={{ project.title }}'" 
+                             alt="{{ project.title }}" 
+                             class="project-image">
+                        <div class="project-info">
+                            <h3 class="project-title">{{ project.title }}</h3>
+                            <p class="project-category">{{ project.category }}</p>
+                        </div>
                     </div>
-                </div>
-            </a>
-
-            <a href="https://github.com/deveshtripathiii/Nutrition-App" target="_blank" class="project-link">
-                <div class="project-card">
-                    <img src="{{ url_for('static', filename='project2.png') }}" 
-                         onerror="this.src='https://via.placeholder.com/600x400/333/fff?text=Nutrition+App'" 
-                         alt="Nutrition App" 
-                         class="project-image">
-                    <div class="project-info">
-                        <h3 class="project-title">Nutrition App</h3>
-                        <p class="project-category">Health / App Dev</p>
-                    </div>
-                </div>
-            </a>
-
+                </a>
+                
+            {% endfor %}
+            
         </div>
     </section>
 
@@ -164,7 +163,6 @@
         const introOverlay = document.getElementById('intro-overlay');
         const introVideo = document.getElementById('intro-video-player');
 
-        // Jab video khatam ho, tab photo dikhao
         introVideo.onended = function() {
             introOverlay.classList.add('fade-out');
             setTimeout(() => {

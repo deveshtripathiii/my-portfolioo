@@ -1,175 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ user.name }} | Portfolio</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<meta charset="UTF-8">
+<title>Devesh Tripathi | Software Engineer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        /* --- INTRO SCREEN STYLES --- */
-        #intro-overlay {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background-color: #000;
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: opacity 1s ease;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/style.css">
 
-        #intro-video-player {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .fade-out {
-            opacity: 0;
-            pointer-events: none;
-        }
-        
-        /* Link Styles */
-        .project-link {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            transition: transform 0.2s ease;
-        }
-        .project-link:hover {
-            transform: scale(1.02);
-            opacity: 0.9;
-        }
-    </style>
 </head>
 <body>
 
-    <div id="intro-overlay">
-        <video id="intro-video-player" autoplay muted playsinline>
-            <source src="{{ url_for('static', filename='intro.mp4') }}" type="video/mp4">
-        </video>
+<header class="navbar">
+  <div class="logo">DEVESH</div>
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <span class="tag">Software Engineer • AI Builder</span>
+    <h1>
+      I Build <span class="accent">Intelligent</span><br>
+      Digital Systems
+    </h1>
+    <p>
+      Backend-focused developer crafting scalable,
+      high-performance applications using Python, Java & AI.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="static/resume.pdf" target="_blank" class="btn-secondary">
+        Download Resume
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <img src="static/profile.png" class="profile-pic">
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <img src="static/nutrition.jpg">
+      <div class="project-content">
+        <h3>AI Nutrition App</h3>
+        <p>ML based diet recommendation system.</p>
+
+        <div class="tech-tags">
+          <span>Python</span>
+          <span>ML</span>
+          <span>Streamlit</span>
+        </div>
+
+        <div class="project-links">
+          <a href="https://nutrition-app-930.streamlit.app/" target="_blank">Live</a>
+          <a href="#" target="_blank">GitHub</a>
+        </div>
+      </div>
     </div>
 
-    <nav class="navbar">
-        <a href="#projects">PROJECTS</a>
-        <a href="#skills">SKILLS</a>
-        <a href="#about">ABOUT</a>
-        <a href="#contact">CONTACT</a>
-    </nav>
+    <div class="project-card">
+      <img src="static/hospital.jpg">
+      <div class="project-content">
+        <h3>Virtual Hospital</h3>
+        <p>Full-stack hospital management system.</p>
 
-    <header class="hero-section">
-        <h1 class="hero-title">{{ user.name }}</h1>
-        <div class="hero-subtitles">
-            <p>{{ user.title }}</p>
-            <p>{{ user.location }}</p>
+        <div class="tech-tags">
+          <span>Django</span>
+          <span>MySQL</span>
         </div>
 
-        <div class="hero-image-container">
-            <img src="{{ url_for('static', filename='profile.png') }}" 
-                 alt="{{ user.name }}" 
-                 class="hero-image"
-                 style="width: 100%; height: 100%; object-fit: cover; object-position: top center !important;">
+        <div class="project-links">
+          <a href="#" target="_blank">Live</a>
+          <a href="#" target="_blank">GitHub</a>
         </div>
-    </header>
+      </div>
+    </div>
 
-    <section id="projects" class="section-pad">
-        <h2 class="section-title">SELECT PROJECTS</h2>
-        <div class="projects-grid">
-            
-            {% for project in user.projects %}
-            
-                {% set link = "#" %}
-                
-                {% if "PDF Summarizer" in project.title %}
-                    {% set link = "https://github.com/deveshtripathiii/PDF-Summarizer" %}
-                {% elif "Nutrition" in project.title %}
-                    {% set link = "https://github.com/deveshtripathiii/Nutrition-App" %}
-                {% endif %}
-                
-                <a href="{{ link }}" target="_blank" class="project-link">
-                    <div class="project-card">
-                        <img src="{{ url_for('static', filename=project.image) }}" 
-                             onerror="this.src='https://via.placeholder.com/600x400/333/fff?text={{ project.title }}'" 
-                             alt="{{ project.title }}" 
-                             class="project-image">
-                        <div class="project-info">
-                            <h3 class="project-title">{{ project.title }}</h3>
-                            <p class="project-category">{{ project.category }}</p>
-                        </div>
-                    </div>
-                </a>
-                
-            {% endfor %}
-            
+    <div class="project-card">
+      <img src="static/ai_project.png">
+      <div class="project-content">
+        <h3>PDF Summarizer</h3>
+        <p>AI-based PDF summarization tool.</p>
+
+        <div class="tech-tags">
+          <span>Python</span>
+          <span>NLP</span>
         </div>
-    </section>
 
-    <section id="skills" class="section-pad skills-section">
-        <h2 class="section-title-center">DEVELOPER<br>TECH STACK</h2>
-        <img src="{{ url_for('static', filename='profile.png') }}" alt="{{ user.name }}" class="small-profile-img">
-        <div class="skills-tags-container">
-            {% for skill in user.skills %}
-            <span class="skill-tag">{{ skill }}</span>
-            {% endfor %}
+        <div class="project-links">
+          <a href="https://pdf-summarizer930.streamlit.app/" target="_blank">Live</a>
+          <a href="https://github.com/deveshtripathiii/PDF-Summarizer" target="_blank">GitHub</a>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <section id="about" class="section-pad about-section">
-        <div class="about-text-content">
-            <h2 class="bio-headline">{{ user.bio_headline }}</h2>
-            <p class="bio-text">{{ user.bio_text }}</p>
-        </div>
-    </section>
+  </div>
+</section>
 
-    <footer id="contact" class="footer-section">
-        <h2 class="footer-title">CONTACT {{ user.name }}</h2>
-        <div class="footer-links">
-            <div class="email-link">
-                <p>EMAIL</p>
-                <a href="mailto:{{ user.email }}" class="big-link">{{ user.email }}</a>
-            </div>
-            <div class="social-links">
-                <p>SOCIAL</p>
-                {% for link in user.social %}
-                <a href="{{ link.url }}" target="_blank" class="big-link">{{ link.name }}</a>
-                {% endfor %}
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; {{ year }}</p>
-            <p>{{ user.location }}</p>
-            <p>{{ time }}</p>
-        </div>
-    </footer>
+<!-- SKILLS -->
+<section id="skills">
+  <h2 class="section-title">Tech Stack</h2>
+  <div class="skills-grid">
+    <div class="skill">Python</div>
+    <div class="skill">Django</div>
+    <div class="skill">Flask</div>
+    <div class="skill">Java</div>
+    <div class="skill">C++</div>
+    <div class="skill">MySQL</div>
+    <div class="skill">Machine Learning</div>
+    <div class="skill">REST APIs</div>
+  </div>
+</section>
 
-    <div class="cursor-glow"></div>
+<!-- CERTIFICATES -->
+<section id="certificates">
+  <h2 class="section-title">Certificates</h2>
 
-    <script>
-        // Mouse Glow
-        const glow = document.querySelector('.cursor-glow');
-        document.addEventListener('mousemove', (e) => {
-            glow.style.left = e.clientX + 'px';
-            glow.style.top = e.clientY + 'px';
-        });
+  <div class="projects-grid">
 
-        // Intro Video Logic
-        const introOverlay = document.getElementById('intro-overlay');
-        const introVideo = document.getElementById('intro-video-player');
+    <div class="project-card">
+      <div class="project-content">
+        <h3>Workshop Certificate (3-Day Program)</h3>
+        <a href="https://www.linkedin.com/posts/devesh-tripathi-176859203_successfully-completed-3-day-workshop-activity-7402553856615886848-tp-l" target="_blank">View Certificate</a>
+      </div>
+    </div>
 
-        introVideo.onended = function() {
-            introOverlay.classList.add('fade-out');
-            setTimeout(() => {
-                introOverlay.style.display = 'none';
-            }, 1000);
-        };
-    </script>
+    <div class="project-card">
+      <div class="project-content">
+        <h3>Turtlemint Certification</h3>
+        <a href="https://www.linkedin.com/posts/devesh-tripathi-176859203_turtlemint-activity-7363411431263752193-iAM6" target="_blank">View Certificate</a>
+      </div>
+    </div>
 
+    <div class="project-card">
+      <div class="project-content">
+        <h3>General Certificate Achievement</h3>
+        <a href="https://www.linkedin.com/posts/devesh-tripathi-176859203_certificate-activity-7255641523579494400-v2qc" target="_blank">View Certificate</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-content">
+        <h3>Social Work Experience</h3>
+        <a href="https://www.linkedin.com/posts/devesh-tripathi-176859203_worked-as-social-worker-i-am-happy-to-post-activity-7242574487097909250-3wCc" target="_blank">View Certificate</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-content">
+        <h3>Learning Achievement</h3>
+        <a href="https://www.linkedin.com/posts/devesh-tripathi-176859203_learning-activity-7208143845539106816-YFT8" target="_blank">View Certificate</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-content">
+        <h3>Internship & Professional Development</h3>
+        <a href="https://www.linkedin.com/posts/devesh-tripathi-176859203_internship-professionaldevelopment-learningjourney-activity-7207288702333571073--oTm" target="_blank">View Certificate</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <h2 class="section-title">About Me</h2>
+  <p>
+    Passionate software developer focused on backend,
+    AI systems and scalable applications.
+  </p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>Let’s Build Something Meaningful Together</h2>
+  <a href="mailto:your-email@gmail.com" class="btn-primary large">
+    Contact Me
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 Devesh Tripathi</p>
+
+  <div class="footer-links">
+    <a href="https://github.com/deveshtripathiii" target="_blank">GitHub</a>
+    <a href="#" target="_blank">LinkedIn</a>
+    <a href="#" target="_blank">Instagram</a>
+  </div>
+</footer>
+
+<script src="static/script.js"></script>
 </body>
 </html>

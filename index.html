@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Devesh Tripathi | Software Engineer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+
+  <!-- Modular CSS (order matters) -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/hero.css') }}"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/sections.css') }}"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/educare.css') }}"/>
+</head>
+<body>
+
+  <!-- ── Custom Cursor ── -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ══════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════ -->
+  <nav>
+    <div class="logo">DT</div>
+    <ul class="nav-links">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certificates">Certs</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#educare" class="nav-highlight">🎓 Educare</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══════════════════════════════════
+       HERO
+  ══════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-left">
+      <div class="hero-badge">Software Engineer • AI Builder</div>
+      <h1 class="hero-title">
+        <span>I Build</span>
+        <span class="accent">Intelligent</span>
+        <span>Systems.</span>
+      </h1>
+      <p class="hero-desc">
+        Backend-focused developer crafting scalable, high-performance applications using Python, Java &amp; AI.
+        Turning complex problems into elegant digital solutions.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 3l14 9-14 9V3z"/>
+          </svg>
+          View Projects
+        </a>
+        <a href="{{ url_for('static', filename='resume.pdf') }}" class="btn-outline" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Resume
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="ring ring-1"></div>
+      <div class="ring ring-2"></div>
+      <div class="ring ring-3"></div>
+
+      <div class="profile-wrap">
+        <!-- Floating tags -->
+        <div class="float-tag">Python 🐍</div>
+        <div class="float-tag">AI / ML</div>
+        <div class="float-tag">Django</div>
+
+        <!-- Arms-folded SVG character (walks in from background) -->
+        <svg class="character-svg" viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="skinG" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#c8956c"/><stop offset="100%" stop-color="#a87240"/>
+            </linearGradient>
+            <linearGradient id="shirtG" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#0c1a3a"/><stop offset="100%" stop-color="#060d20"/>
+            </linearGradient>
+            <linearGradient id="pantsG" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/>
+            </linearGradient>
+            <radialGradient id="gndShadow" cx="50%" cy="100%" r="40%">
+              <stop offset="0%" stop-color="rgba(0,229,255,0.18)"/>
+              <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+            </radialGradient>
+            <filter id="glow2">
+              <feGaussianBlur stdDeviation="2.5" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <!-- Ground shadow -->
+          <ellipse cx="150" cy="415" rx="80" ry="10" fill="url(#gndShadow)"/>
+
+          <!-- Shoes -->
+          <rect x="106" y="390" width="30" height="13" rx="5" fill="#1a1a1a"/>
+          <rect x="164" y="390" width="30" height="13" rx="5" fill="#1a1a1a"/>
+          <ellipse cx="121" cy="402" rx="20" ry="8" fill="#111"/>
+          <ellipse cx="179" cy="402" rx="20" ry="8" fill="#111"/>
+
+          <!-- Legs / Pants -->
+          <rect x="108" y="293" width="36" height="102" rx="8" fill="url(#pantsG)"/>
+          <rect x="156" y="293" width="36" height="102" rx="8" fill="url(#pantsG)"/>
+
+          <!-- Belt -->
+          <rect x="100" y="288" width="100" height="10" rx="3" fill="#2d3748"/>
+          <rect x="143" y="286" width="14" height="14" rx="2" fill="#4a5568"/>
+
+          <!-- Torso / Shirt -->
+          <rect x="98" y="175" width="104" height="118" rx="14" fill="url(#shirtG)"/>
+
+          <!-- Cyan accent details on shirt -->
+          <line x1="112" y1="195" x2="112" y2="258" stroke="rgba(0,229,255,0.15)" stroke-width="1"/>
+          <line x1="188" y1="195" x2="188" y2="258" stroke="rgba(0,229,255,0.15)" stroke-width="1"/>
+          <line x1="112" y1="226" x2="188" y2="226" stroke="rgba(0,229,255,0.08)" stroke-width="1"/>
+
+          <!-- V collar -->
+          <polygon points="150,182 136,202 164,202" fill="#0a1530"/>
+
+          <!-- ARMS FOLDED — right arm on top -->
+          <rect x="75"  y="208" width="82" height="23" rx="11" fill="#0c1a3a"/>
+          <rect x="100" y="197" width="82" height="23" rx="11" fill="#0e1e42"/>
+
+          <!-- Left hand (end of top arm) -->
+          <ellipse cx="180" cy="209" rx="13" ry="11" fill="url(#skinG)"/>
+          <!-- Finger lines -->
+          <line x1="170" y1="206" x2="181" y2="206" stroke="#8a6040" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="169" y1="210" x2="181" y2="210" stroke="#8a6040" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="171" y1="214" x2="180" y2="214" stroke="#8a6040" stroke-width="1.2" stroke-linecap="round"/>
+
+          <!-- Right hand (end of bottom arm) -->
+          <ellipse cx="76" cy="220" rx="13" ry="11" fill="url(#skinG)"/>
+          <line x1="66" y1="217" x2="77" y2="217" stroke="#8a6040" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="65" y1="221" x2="77" y2="221" stroke="#8a6040" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="67" y1="225" x2="76" y2="225" stroke="#8a6040" stroke-width="1.2" stroke-linecap="round"/>
+
+          <!-- Neck -->
+          <rect x="136" y="157" width="28" height="22" rx="6" fill="url(#skinG)"/>
+
+          <!-- Head -->
+          <ellipse cx="150" cy="132" rx="50" ry="55" fill="url(#skinG)"/>
+
+          <!-- Hair -->
+          <path d="M 100 117 Q 100 73 150 70 Q 200 73 200 117 Q 185 82 150 80 Q 115 82 100 117 Z" fill="#1a0800"/>
+          <path d="M 103 112 Q 108 87 132 79" stroke="#2d1100" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M 112 108 Q 120 86 140 78" stroke="#2d1100" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+          <!-- Eyes -->
+          <ellipse cx="133" cy="128" rx="9" ry="10" fill="#fff"/>
+          <ellipse cx="167" cy="128" rx="9" ry="10" fill="#fff"/>
+          <ellipse cx="134" cy="129" rx="6" ry="7" fill="#2d1100"/>
+          <ellipse cx="168" cy="129" rx="6" ry="7" fill="#2d1100"/>
+          <ellipse cx="135" cy="127" rx="3" ry="4" fill="#111"/>
+          <ellipse cx="169" cy="127" rx="3" ry="4" fill="#111"/>
+          <!-- Eye shine -->
+          <ellipse cx="137" cy="125" rx="1.5" ry="2" fill="#fff" opacity=".9"/>
+          <ellipse cx="171" cy="125" rx="1.5" ry="2" fill="#fff" opacity=".9"/>
+
+          <!-- Eyebrows -->
+          <path d="M 122 115 Q 133 110 143 113" stroke="#1a0800" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M 157 113 Q 167 110 177 115" stroke="#1a0800" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+          <!-- Nose -->
+          <path d="M 148 130 Q 145 146 148 150 Q 152 152 155 150 Q 158 146 152 130" stroke="#a87240" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+          <!-- Confident smile -->
+          <path d="M 138 160 Q 150 169 162 160" stroke="#7a3d20" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+          <!-- Ears -->
+          <ellipse cx="100" cy="132" rx="8" ry="11" fill="url(#skinG)"/>
+          <ellipse cx="200" cy="132" rx="8" ry="11" fill="url(#skinG)"/>
+
+          <!-- Cyan glow underfoot -->
+          <ellipse cx="150" cy="410" rx="58" ry="5" fill="rgba(0,229,255,0.07)" filter="url(#glow2)"/>
+        </svg>
+
+        <div class="profile-frame"></div>
+      </div>
+
+      <div class="pose-label">Devesh Tripathi</div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       PROJECTS
+  ══════════════════════════════════ -->
+  <section id="projects">
+    <div class="section-label">// 01 — Work</div>
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="projects-grid">
+
+      <div class="project-card reveal">
+        <img src="{{ url_for('static', filename='nutrition.jpg') }}" alt="AI Nutrition App" class="project-img"
+             onerror="this.style.background='linear-gradient(135deg,#0c1a3a,#060d20)';this.removeAttribute('src')"/>
+        <div class="project-body">
+          <h3 class="project-title">AI Nutrition App</h3>
+          <p class="project-desc">ML-based personalized diet recommendation system that analyzes user data to suggest optimal nutrition plans.</p>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">ML</span><span class="tag">Streamlit</span>
+          </div>
+          <div class="project-links">
+            <a href="https://nutrition-app-930.streamlit.app/" target="_blank" class="project-link live">Live ↗</a>
+            <a href="#" class="project-link gh">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" style="transition-delay:.1s">
+        <img src="{{ url_for('static', filename='hospital.jpg') }}" alt="Virtual Hospital" class="project-img"
+             onerror="this.style.background='linear-gradient(135deg,#0a1a2e,#061020)';this.removeAttribute('src')"/>
+        <div class="project-body">
+          <h3 class="project-title">Virtual Hospital</h3>
+          <p class="project-desc">Full-stack hospital management system with patient records, appointment booking, and doctor dashboard.</p>
+          <div class="tags">
+            <span class="tag">Django</span><span class="tag">MySQL</span><span class="tag">REST API</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link live">Live ↗</a>
+            <a href="#" class="project-link gh">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" style="transition-delay:.2s">
+        <img src="{{ url_for('static', filename='ai_project.png') }}" alt="PDF Summarizer" class="project-img"
+             onerror="this.style.background='linear-gradient(135deg,#0c1830,#060d20)';this.removeAttribute('src')"/>
+        <div class="project-body">
+          <h3 class="project-title">PDF Summarizer</h3>
+          <p class="project-desc">AI-powered NLP tool that intelligently condenses large PDF documents into clear, actionable summaries.</p>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">NLP</span><span class="tag">AI</span>
+          </div>
+          <div class="project-links">
+            <a href="https://pdf-summarizer930.streamlit.app/" target="_blank" class="project-link live">Live ↗</a>
+            <a href="https://github.com/deveshtripathiii/PDF-Summarizer" target="_blank" class="project-link gh">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       SKILLS
+  ══════════════════════════════════ -->
+  <section id="skills">
+    <div class="section-label">// 02 — Arsenal</div>
+    <h2 class="section-title">Tech Stack</h2>
+    <div class="skills-grid">
+      <div class="skill-card reveal"><div class="skill-icon">🐍</div><div class="skill-name">Python</div></div>
+      <div class="skill-card reveal" style="transition-delay:.05s"><div class="skill-icon">🦅</div><div class="skill-name">Django</div></div>
+      <div class="skill-card reveal" style="transition-delay:.1s"><div class="skill-icon">🌶️</div><div class="skill-name">Flask</div></div>
+      <div class="skill-card reveal" style="transition-delay:.15s"><div class="skill-icon">☕</div><div class="skill-name">Java</div></div>
+      <div class="skill-card reveal" style="transition-delay:.2s"><div class="skill-icon">⚡</div><div class="skill-name">C++</div></div>
+      <div class="skill-card reveal" style="transition-delay:.25s"><div class="skill-icon">🗄️</div><div class="skill-name">MySQL</div></div>
+      <div class="skill-card reveal" style="transition-delay:.3s"><div class="skill-icon">🤖</div><div class="skill-name">Machine Learning</div></div>
+      <div class="skill-card reveal" style="transition-delay:.35s"><div class="skill-icon">🔌</div><div class="skill-name">REST APIs</div></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       CERTIFICATES
+  ══════════════════════════════════ -->
+  <section id="certificates">
+    <div class="section-label">// 03 — Achievements</div>
+    <h2 class="section-title">Certificates</h2>
+    <div class="certs-grid">
+      <a href="https://www.linkedin.com/posts/devesh-tripathi-176859203_successfully-completed-3-day-workshop-activity-7402553856615886848-tp-l" target="_blank" class="cert-card reveal">
+        <div class="cert-num">01</div><div class="cert-info"><div class="cert-title">Workshop Certificate (3-Day Program)</div><div class="cert-view">View on LinkedIn →</div></div>
+      </a>
+      <a href="https://www.linkedin.com/posts/devesh-tripathi-176859203_turtlemint-activity-7363411431263752193-iAM6" target="_blank" class="cert-card reveal" style="transition-delay:.05s">
+        <div class="cert-num">02</div><div class="cert-info"><div class="cert-title">Turtlemint Certification</div><div class="cert-view">View on LinkedIn →</div></div>
+      </a>
+      <a href="https://www.linkedin.com/posts/devesh-tripathi-176859203_certificate-activity-7255641523579494400-v2qc" target="_blank" class="cert-card reveal" style="transition-delay:.1s">
+        <div class="cert-num">03</div><div class="cert-info"><div class="cert-title">General Certificate Achievement</div><div class="cert-view">View on LinkedIn →</div></div>
+      </a>
+      <a href="https://www.linkedin.com/posts/devesh-tripathi-176859203_worked-as-social-worker-i-am-happy-to-post-activity-7242574487097909250-3wCc" target="_blank" class="cert-card reveal" style="transition-delay:.15s">
+        <div class="cert-num">04</div><div class="cert-info"><div class="cert-title">Social Work Experience</div><div class="cert-view">View on LinkedIn →</div></div>
+      </a>
+      <a href="https://www.linkedin.com/posts/devesh-tripathi-176859203_learning-activity-7208143845539106816-YFT8" target="_blank" class="cert-card reveal" style="transition-delay:.2s">
+        <div class="cert-num">05</div><div class="cert-info"><div class="cert-title">Learning Achievement</div><div class="cert-view">View on LinkedIn →</div></div>
+      </a>
+      <a href="https://www.linkedin.com/posts/devesh-tripathi-176859203_internship-professionaldevelopment-learningjourney-activity-7207288702333571073--oTm" target="_blank" class="cert-card reveal" style="transition-delay:.25s">
+        <div class="cert-num">06</div><div class="cert-info"><div class="cert-title">Internship &amp; Professional Development</div><div class="cert-view">View on LinkedIn →</div></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       ABOUT
+  ══════════════════════════════════ -->
+  <section id="about">
+    <div class="about-text">
+      <div class="section-label">// 04 — Me</div>
+      <h2 class="section-title" style="margin-bottom:28px">About Me</h2>
+      <p>Hey! I'm Devesh — a backend-focused software engineer with a passion for building intelligent systems that solve real problems. I work primarily with Python, Django, and Machine Learning.</p>
+      <p>When I'm not writing code, I'm exploring AI research, contributing to open source, or building projects that sit at the intersection of software and intelligence.</p>
+      <p class="about-accent">&gt; Always building. Always learning.</p>
+    </div>
+    <div class="about-stats">
+      <div class="stat reveal"><div class="stat-num">3+</div><div class="stat-label">Projects Shipped</div></div>
+      <div class="stat reveal" style="transition-delay:.05s"><div class="stat-num">6+</div><div class="stat-label">Certificates</div></div>
+      <div class="stat reveal" style="transition-delay:.1s"><div class="stat-num">8+</div><div class="stat-label">Technologies</div></div>
+      <div class="stat reveal" style="transition-delay:.15s"><div class="stat-num">∞</div><div class="stat-label">Coffee Consumed</div></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       EDUCARE — PRODUCT SALES
+  ══════════════════════════════════ -->
+  <section id="educare">
+
+    <div class="edu-badge">
+      <span class="dot"></span>
+      🎓 Ab Available Hai — Educare Coaching Portal
+    </div>
+
+    <h2 class="edu-headline">
+      <span class="white">Apni Coaching Ko</span>
+      <span class="gold">Digital Banao.</span>
+      <span class="white small">Ek Complete Portal — Sab Kuch Ek Jagah.</span>
+    </h2>
+
+    <p class="edu-sub">
+      Maine khud banaya hai — <strong>Educare</strong> — ek fully functional coaching management system.
+      Ab aap isse apni coaching ke liye khareed sakte hain aur ek <strong>professional online presence</strong>
+      bana sakte hain. Bina kisi developer ko baar baar paison diye.
+    </p>
+
+    <!-- Pain Points -->
+    <div class="edu-pain reveal">
+      <div class="edu-pain-title">🤔 Kya Aap Bhi Yahi Face Kar Rahe Hain?</div>
+      <ul class="pain-grid">
+        <li class="pain-item"><span class="bad">✗</span> Students ki fees track karna mushkil lagta hai?</li>
+        <li class="pain-item"><span class="bad">✗</span> Batches manually manage karne mein time waste?</li>
+        <li class="pain-item"><span class="bad">✗</span> Notes WhatsApp pe bhejna padta hai?</li>
+        <li class="pain-item"><span class="bad">✗</span> Parents ko progress report dene mein pareshani?</li>
+        <li class="pain-item"><span class="bad">✗</span> Competitor ke paas portal hai, aapke paas nahi?</li>
+        <li class="pain-item"><span class="bad">✗</span> Custom portal ke liye lakh rupaye maang raha hai developer?</li>
+        <li class="pain-item"><span class="good">✓</span> <strong style="color:#22c55e">Educare in sab problems ek saath solve karta hai.</strong></li>
+        <li class="pain-item"><span class="good">✓</span> <strong style="color:#22c55e">Ek baar pay karo — 10 saal tak tension-free.</strong></li>
+      </ul>
+    </div>
+
+    <!-- Features -->
+    <div class="edu-features">
+      <div class="edu-feat reveal"><div class="edu-feat-icon">🖥️</div><div class="edu-feat-title">Professional Website</div><div class="edu-feat-desc">Aapki coaching ka apna website — courses, fees, contact sab dikhaye. Students impress honge.</div></div>
+      <div class="edu-feat reveal" style="transition-delay:.05s"><div class="edu-feat-icon">👨‍🎓</div><div class="edu-feat-title">Student Management</div><div class="edu-feat-desc">Enrollment, fees records, batch assignment — sab ek dashboard se manage karo.</div></div>
+      <div class="edu-feat reveal" style="transition-delay:.1s"><div class="edu-feat-icon">📚</div><div class="edu-feat-title">Study Material Upload</div><div class="edu-feat-desc">Notes, PDFs, videos directly portal pe upload karo. Students login karke download karein.</div></div>
+      <div class="edu-feat reveal" style="transition-delay:.15s"><div class="edu-feat-icon">📊</div><div class="edu-feat-title">Attendance &amp; Progress</div><div class="edu-feat-desc">Daily attendance, test marks, progress reports — parents bhi dekh sakein.</div></div>
+      <div class="edu-feat reveal" style="transition-delay:.2s"><div class="edu-feat-icon">💳</div><div class="edu-feat-title">Fees Management</div><div class="edu-feat-desc">Pending fees alerts, payment records, auto reminders — manual kaam khatam.</div></div>
+      <div class="edu-feat reveal" style="transition-delay:.25s"><div class="edu-feat-icon">📱</div><div class="edu-feat-title">Mobile Friendly</div><div class="edu-feat-desc">Phone pe perfectly kaam karta hai. Students aur teachers dono ke liye easy.</div></div>
+      <div class="edu-feat reveal" style="transition-delay:.3s"><div class="edu-feat-icon">🔒</div><div class="edu-feat-title">Secure Login System</div><div class="edu-feat-desc">Admin, teacher, student — alag roles aur permissions ke saath fully secure.</div></div>
+      <div class="edu-feat reveal" style="transition-delay:.35s"><div class="edu-feat-icon">🎨</div><div class="edu-feat-title">Custom Branding</div><div class="edu-feat-desc">Aapki coaching ka naam, logo, colors — portal bilkul aapki identity le lega.</div></div>
+    </div>
+
+    <!-- Social proof -->
+    <div class="edu-proof reveal">
+      <div class="proof-card"><div class="proof-num">100+</div><div class="proof-label">Features Built-In</div></div>
+      <div class="proof-card"><div class="proof-num">₹0</div><div class="proof-label">Hidden Charges</div></div>
+      <div class="proof-card"><div class="proof-num">5 Yr</div><div class="proof-label">Free Maintenance (Lifetime)</div></div>
+      <div class="proof-card"><div class="proof-num">24h</div><div class="proof-label">Setup Time</div></div>
+    </div>
+
+    <!-- Urgency strip -->
+    <div class="urgency-strip reveal">
+      <div class="urgency-icon">🔥</div>
+      <div class="urgency-text">
+        <strong>Sirf 3 Slots Bache Hain!</strong> Is mahine sirf <strong>5 coaching centers</strong> ko personally onboard kar raha hoon.
+        Slot full hone se pehle WhatsApp karo aur apni jagah pakki karo.
+      </div>
+      <div class="slots-pill" id="edu-slots">⚡ 3 Slots Remaining</div>
+    </div>
+
+    <!-- Countdown -->
+    <div class="countdown-wrap reveal">
+      <div class="countdown-label">🕐 Special Launch Price Khatam Hone Mein</div>
+      <div class="cd-boxes">
+        <div class="cd-box"><div class="cd-num" id="cd-d">10</div><div class="cd-unit">Days</div></div>
+        <div class="cd-box"><div class="cd-num" id="cd-h">00</div><div class="cd-unit">Hours</div></div>
+        <div class="cd-box"><div class="cd-num" id="cd-m">00</div><div class="cd-unit">Mins</div></div>
+        <div class="cd-box"><div class="cd-num" id="cd-s">00</div><div class="cd-unit">Secs</div></div>
+      </div>
+    </div>
+
+    <!-- PRICING -->
+    <div class="pricing-row">
+
+      <!-- Annual Plan -->
+      <div class="price-card reveal">
+        <div class="plan-label">// Annual Plan</div>
+        <div class="price-amount"><span class="cur">₹</span>10,000</div>
+        <div class="price-term">per year &nbsp;·&nbsp; renew karein ya upgrade karein</div>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li><span class="tick">✓</span> Full Educare Portal Access</li>
+          <li><span class="tick">✓</span> Student &amp; Batch Management</li>
+          <li><span class="tick">✓</span> Study Material Upload</li>
+          <li><span class="tick">✓</span> Fees Tracking System</li>
+          <li><span class="tick">✓</span> Mobile Responsive Design</li>
+          <li><span class="tick">✓</span> Custom Coaching Branding</li>
+          <li><span class="tick">✓</span> 1 Year Technical Support</li>
+          <li><span class="tick">✓</span> Domain Setup Available (extra)</li>
+        </ul>
+        <a class="buy-btn outline"
+           href="https://wa.me/917080552397?text=Hii%20Devesh%2C%20mujhe%20Educare%20Coaching%20Portal%20ka%20ANNUAL%20PLAN%20(%E2%82%B910%2C000%2Fyear)%20lena%20hai.%20Please%20details%20batao."
+           target="_blank">
+          <svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          WhatsApp — ₹10,000/yr
+        </a>
+      </div>
+
+      <!-- Lifetime / 10-Year Plan (BEST) -->
+      <div class="price-card best reveal" style="transition-delay:.1s">
+        <div class="best-badge">🏆 BEST DEAL — MOST POPULAR</div>
+        <div class="plan-label">// 10 Saal Ka Plan</div>
+        <div class="price-amount"><span class="cur">₹</span>25,000</div>
+        <div class="price-term">sirf ek baar · 10 saal tak tension-free</div>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li><span class="tick-gold">★</span> Full Educare Portal — 10 Saal</li>
+          <li><span class="tick-gold">★</span> 5 Saal FREE Maintenance Included</li>
+          <li><span class="tick-gold">★</span> Student, Batch &amp; Fees Management</li>
+          <li><span class="tick-gold">★</span> Study Material + Assignment Upload</li>
+          <li><span class="tick-gold">★</span> Parent Portal &amp; Progress Reports</li>
+          <li><span class="tick-gold">★</span> Complete Custom Branding</li>
+          <li><span class="tick-gold">★</span> Mobile + Desktop Perfect</li>
+          <li><span class="tick-gold">★</span> Priority Support — Direct WhatsApp</li>
+          <li><span class="tick-gold">★</span> Future Updates FREE</li>
+          <li><span class="tick-gold">★</span> Domain Setup Available (extra)</li>
+        </ul>
+        <a class="buy-btn solid"
+           href="https://wa.me/917080552397?text=Hii%20Devesh%2C%20mujhe%20Educare%20Coaching%20Portal%20ka%2010%20SAAL%20WALA%20PLAN%20(%E2%82%B925%2C000%20+%205%20Yr%20Free%20Maintenance)%20lena%20hai.%20Please%20full%20details%20aur%20demo%20dikhao."
+           target="_blank">
+          <svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          🔥 Buy Now — ₹25,000 / 10 Saal!
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Domain note -->
+    <div class="domain-note reveal">
+      <div class="domain-note-icon">🌐</div>
+      <div class="domain-note-text">
+        <strong>Domain Chahiye?</strong> Agar aapka apna domain (jaise <em>yourcoaching.com</em>) chahiye,
+        hum setup kar denge — thoda extra charge lagega. WhatsApp pe pooch sakte ho.
+        <strong>Domain price dono plans mein include nahi hai.</strong>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════
+       CONTACT
+  ══════════════════════════════════ -->
+  <section id="contact">
+    <div class="contact-inner reveal">
+      <div class="section-label" style="text-align:center">// 05 — Let's Talk</div>
+      <h2 class="section-title">Build Something Together</h2>
+      <p class="contact-desc">Have a project in mind? Looking for a backend developer or AI engineer? Let's connect and create something meaningful.</p>
+      <a href="mailto:your-email@gmail.com" class="contact-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        Get In Touch
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       FOOTER
+  ══════════════════════════════════ -->
+  <footer>
+    <div class="footer-logo">DT</div>
+    <div class="footer-links">
+      <a href="https://github.com/deveshtripathiii" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/devesh-tripathi-176859203" target="_blank">LinkedIn</a>
+      <a href="#">Instagram</a>
+    </div>
+    <div class="footer-copy">© 2026 Devesh Tripathi</div>
+  </footer>
+
+  <!-- Modular JS (order matters: main first, then section-specific) -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/educare.js') }}"></script>
+
+</body>
+</html>

@@ -1,58 +1,32 @@
 /* ════════════════════════════════════════════════════
-   educare.js  —  Countdown Timer · Slots Counter
-   Cohesion: ONLY Educare section behaviour.
-   Completely independent from main.js.
+   educare.js — Countdown · Slots Counter
 ════════════════════════════════════════════════════ */
-
-(function () {
+(function(){
   "use strict";
-
-  /* ── Countdown: 10 days from first visit ── */
-  var STORAGE_KEY = "edu_deadline";
-  var deadline;
-
-  var stored = localStorage.getItem(STORAGE_KEY);
-  if (stored) {
-    deadline = new Date(parseInt(stored, 10));
-  } else {
-    deadline = new Date();
-    deadline.setDate(deadline.getDate() + 10);
-    localStorage.setItem(STORAGE_KEY, deadline.getTime().toString());
+  var KEY="edu_dl2";
+  var dl;
+  try{
+    var s=localStorage.getItem(KEY);
+    dl=s?new Date(parseInt(s,10)):null;
+  }catch(e){dl=null;}
+  if(!dl||isNaN(dl.getTime())){
+    dl=new Date();dl.setDate(dl.getDate()+10);
+    try{localStorage.setItem(KEY,dl.getTime().toString());}catch(e){}
   }
-
-  function pad(n) { return String(n).padStart(2, "0"); }
-
-  function updateCountdown() {
-    var now  = new Date();
-    var diff = deadline - now;
-    if (diff <= 0) diff = 0;
-
-    var d = Math.floor(diff / (1000 * 60 * 60 * 24));
-    var h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    var s = Math.floor((diff % (1000 * 60)) / 1000);
-
-    var dEl = document.getElementById("cd-d");
-    var hEl = document.getElementById("cd-h");
-    var mEl = document.getElementById("cd-m");
-    var sEl = document.getElementById("cd-s");
-
-    if (dEl) dEl.textContent = pad(d);
-    if (hEl) hEl.textContent = pad(h);
-    if (mEl) mEl.textContent = pad(m);
-    if (sEl) sEl.textContent = pad(s);
+  function pad(n){return String(n).padStart(2,"0");}
+  function tick(){
+    var diff=Math.max(0,dl-new Date());
+    var d=Math.floor(diff/864e5);
+    var h=Math.floor(diff%864e5/36e5);
+    var m=Math.floor(diff%36e5/6e4);
+    var s=Math.floor(diff%6e4/1e3);
+    ["cd-d","cd-h","cd-m","cd-s"].forEach(function(id,i){
+      var el=document.getElementById(id);
+      if(el)el.textContent=pad([d,h,m,s][i]);
+    });
   }
+  setInterval(tick,1000);tick();
 
-  setInterval(updateCountdown, 1000);
-  updateCountdown();
-
-  /* ── Slots counter (social urgency) ── */
-  var slotsEl = document.getElementById("edu-slots");
-  if (slotsEl) {
-    // Simulate 1 slot being taken after 40 seconds
-    setTimeout(function () {
-      slotsEl.textContent = "⚡ 2 Slots Remaining";
-    }, 40000);
-  }
-
+  var sl=document.getElementById("edu-slots");
+  if(sl){setTimeout(function(){sl.textContent="⚡ 2 Slots Remaining";},42000);}
 })();

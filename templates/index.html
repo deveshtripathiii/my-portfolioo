@@ -14,24 +14,24 @@
 </head>
 <body>
 
-<!-- ══ LOADING SCREEN ══ -->
+<!-- LOADER -->
 <div id="loader">
   <div class="loader-logo">DT</div>
   <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
   <div class="loader-text">Initializing Portfolio...</div>
 </div>
 
-<!-- ══ CURSOR ══ -->
+<!-- CURSOR -->
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
-<!-- ══ WHATSAPP FLOAT ══ -->
-<a class="wa-float" href="https://wa.me/917080552397?text=Hi%20Devesh!%20I%20want%20to%20know%20more%20about%20your%20work." target="_blank" rel="noopener">
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float" href="https://wa.me/917080552397?text=Hi%20Devesh!" target="_blank">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
   <span class="wa-float-tip">Chat on WhatsApp</span>
 </a>
 
-<!-- ══ NAVBAR ══ -->
+<!-- NAV -->
 <nav>
   <div class="logo">DT</div>
   <ul class="nav-links">
@@ -45,7 +45,7 @@
   </ul>
 </nav>
 
-<!-- ══ HERO ══ -->
+<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-left">
     <div class="hero-badge">Software Engineer • AI Builder</div>
@@ -60,13 +60,12 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 3l14 9-14 9V3z"/></svg>
         View Projects
       </a>
-      <a href="https://drive.google.com/file/d/1Q_UUDPPne-rguCV6RlNDKUkdC75w6fGl/view?usp=drive_link" class="btn-outline" target="_blank">
+      <a href="https://drive.google.com/file/d/1Q_UUDPPne-rguCV6RlNDKUkdC75w6fGl/view?usp=drive_link" class="btn-outline" target="_blank" rel="noopener">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Resume
       </a>
     </div>
   </div>
-
   <div class="hero-right">
     <div class="ring ring-1"></div>
     <div class="ring ring-2"></div>
@@ -75,7 +74,19 @@
       <div class="float-tag">Python 🐍</div>
       <div class="float-tag">AI / ML</div>
       <div class="float-tag">Django</div>
-      <img class="profile-photo" src="{{ url_for('static', filename='profile.png') }}" alt="Devesh Tripathi"/>
+      <!-- ════════════════════════════════════════
+           PHOTO: Apni Google Drive photo ki
+           DIRECT link yahan paste karo:
+           Format: https://drive.google.com/uc?export=view&id=YOUR_FILE_ID
+           
+           Example: agar link hai
+           https://drive.google.com/file/d/ABC123xyz/view
+           toh src mein likhna:
+           https://drive.google.com/uc?export=view&id=ABC123xyz
+      ════════════════════════════════════════ -->
+      <img class="profile-photo"
+           src="{{ url_for('static', filename='profile.png') }}"
+           alt="Devesh Tripathi"/>
       <div class="profile-frame"></div>
     </div>
     <div class="photo-glow"></div>
@@ -83,7 +94,7 @@
   </div>
 </section>
 
-<!-- ══ PROJECTS ══ -->
+<!-- PROJECTS -->
 <section id="projects">
   <div class="section-label">// 01 — Work</div>
   <h2 class="section-title">Featured Projects</h2>
@@ -91,48 +102,60 @@
 
     <div class="project-card reveal">
       <div class="project-img-wrap">
-        <img class="project-img" src="https://pdf-summarizer930.streamlit.app/~/+/media/thumbnail.png" alt="PDF Summarizer"
-             onerror="this.parentNode.innerHTML='<div class=\'project-img-placeholder\'>📄</div>'"/>
+        <div class="project-img-placeholder">📄</div>
       </div>
       <div class="project-body">
         <h3 class="project-title">PDF Summarizer</h3>
         <p class="project-desc">AI-powered NLP tool that intelligently condenses large PDF documents into clear, actionable summaries using advanced language models.</p>
-        <div class="tags"><span class="tag">Python</span><span class="tag">NLP</span><span class="tag">Streamlit</span><span class="tag">AI</span></div>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">NLP</span><span class="tag">Streamlit</span><span class="tag">AI</span>
+        </div>
         <div class="project-links">
-          <a href="https://pdf-summarizer930.streamlit.app/" target="_blank" class="project-link live">Live ↗</a>
-          <a href="https://github.com/deveshtripathiii/PDF-Summarizer" target="_blank" class="project-link gh">GitHub</a>
+          <a href="https://pdf-summarizer930.streamlit.app/" target="_blank" rel="noopener" class="project-link live">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Live Demo
+          </a>
+          <a href="https://github.com/deveshtripathiii/PDF-Summarizer" target="_blank" rel="noopener" class="project-link gh">GitHub ↗</a>
         </div>
       </div>
     </div>
 
     <div class="project-card reveal" style="transition-delay:.1s">
       <div class="project-img-wrap">
-        <img class="project-img" src="https://nutrition-app-930.streamlit.app/~/+/media/thumbnail.png" alt="AI Nutrition"
-             onerror="this.parentNode.innerHTML='<div class=\'project-img-placeholder\'>🥗</div>'"/>
+        <div class="project-img-placeholder">🥗</div>
       </div>
       <div class="project-body">
         <h3 class="project-title">AI Nutrition App</h3>
         <p class="project-desc">ML-based personalized diet recommendation system that analyzes user health data to suggest optimal, science-backed nutrition plans.</p>
-        <div class="tags"><span class="tag">Python</span><span class="tag">ML</span><span class="tag">Streamlit</span></div>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">ML</span><span class="tag">Streamlit</span>
+        </div>
         <div class="project-links">
-          <a href="https://nutrition-app-930.streamlit.app/" target="_blank" class="project-link live">Live ↗</a>
-          <a href="#" class="project-link gh">GitHub</a>
+          <a href="https://nutrition-app-930.streamlit.app/" target="_blank" rel="noopener" class="project-link live">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Live Demo
+          </a>
+          <a href="#" class="project-link gh">GitHub ↗</a>
         </div>
       </div>
     </div>
 
     <div class="project-card reveal" style="transition-delay:.2s">
       <div class="project-img-wrap">
-        <img class="project-img" src="https://edu-v2-lilac.vercel.app/static/preview.png" alt="Educare Portal"
-             onerror="this.parentNode.innerHTML='<div class=\'project-img-placeholder\'>🎓</div>'"/>
+        <div class="project-img-placeholder">🎓</div>
       </div>
       <div class="project-body">
         <h3 class="project-title">Educare Coaching Portal</h3>
         <p class="project-desc">Full-stack coaching management system — student management, fees tracking, study material upload, attendance &amp; parent portal.</p>
-        <div class="tags"><span class="tag">Django</span><span class="tag">MySQL</span><span class="tag">REST API</span><span class="tag">Python</span></div>
+        <div class="tags">
+          <span class="tag">Django</span><span class="tag">MySQL</span><span class="tag">REST API</span><span class="tag">Python</span>
+        </div>
         <div class="project-links">
-          <a href="https://edu-v2-lilac.vercel.app/" target="_blank" class="project-link live">Live ↗</a>
-          <a href="#educare" class="project-link gh">Buy Now</a>
+          <a href="https://edu-v2-lilac.vercel.app/" target="_blank" rel="noopener" class="project-link live">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Live Demo
+          </a>
+          <a href="#educare" class="project-link gh">Buy Now ★</a>
         </div>
       </div>
     </div>
@@ -140,7 +163,7 @@
   </div>
 </section>
 
-<!-- ══ SKILLS ══ -->
+<!-- SKILLS -->
 <section id="skills">
   <div class="section-label">// 02 — Arsenal</div>
   <h2 class="section-title">Tech Stack</h2>
@@ -156,7 +179,7 @@
   </div>
 </section>
 
-<!-- ══ CERTIFICATES ══ -->
+<!-- CERTIFICATES -->
 <section id="certificates" style="background:var(--bg2)">
   <div class="section-label">// 03 — Achievements</div>
   <h2 class="section-title">Certificates</h2>
@@ -182,268 +205,226 @@
   </div>
 </section>
 
-<!-- ══ TESTIMONIALS ══ -->
+<!-- TESTIMONIALS -->
 <section id="testimonials">
   <div class="section-label">// 04 — Social Proof</div>
   <h2 class="section-title">What People Say</h2>
 
-  <!-- Proof strip -->
   <div class="social-proof-strip reveal">
     <div class="proof-stat"><div class="proof-stat-num">500+</div><div class="proof-stat-label">Educare Sold</div></div>
-    <div class="proof-divider"></div>
     <div class="proof-stat"><div class="proof-stat-num">98%</div><div class="proof-stat-label">Satisfaction Rate</div></div>
-    <div class="proof-divider"></div>
     <div class="proof-stat"><div class="proof-stat-num">200+</div><div class="proof-stat-label">Happy Teachers</div></div>
-    <div class="proof-divider"></div>
     <div class="proof-stat"><div class="proof-stat-num">50+</div><div class="proof-stat-label">Coaching Centers</div></div>
   </div>
 
-  <!-- Tabs -->
   <div class="testimonials-tabs">
     <button class="tab-btn active" data-tab="tab-students">👨‍🎓 Students</button>
     <button class="tab-btn" data-tab="tab-teachers">👩‍🏫 Teachers</button>
   </div>
 
-  <!-- Students panel -->
+  <!-- STUDENTS -->
   <div class="testimonials-panel active" id="tab-students">
+
     <div class="testi-card reveal">
-      <div class="testi-stars">★★★★★</div>
+      <div class="testi-quote-icon">"</div>
+      <div class="testi-stars">
+        <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
       <p class="testi-text">Pehle notes ke liye sir ke paas jaana padta tha, ab seedha portal se download kar leta hoon. Bahut time bachta hai aur sab organized hai.</p>
-      <div class="testi-author"><div class="testi-avatar">R</div><div><div class="testi-name">Rahul Sharma</div><div class="testi-role">Class 12 · Science</div></div></div>
+      <div class="testi-divider"></div>
+      <div class="testi-author">
+        <div class="testi-avatar">R</div>
+        <div><div class="testi-name">Rahul Sharma</div><div class="testi-role">Class 12 · Science</div></div>
+        <span class="testi-badge">✓ Verified</span>
+      </div>
     </div>
+
     <div class="testi-card reveal" style="transition-delay:.05s">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Attendance aur test marks sab ek jagah dikh jaate hain. Parents bhi khush hain kyunki unhe bhi progress report milti hai directly.</p>
-      <div class="testi-author"><div class="testi-avatar">P</div><div><div class="testi-name">Priya Gupta</div><div class="testi-role">Class 11 · Commerce</div></div></div>
+      <div class="testi-quote-icon">"</div>
+      <div class="testi-stars"><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <p class="testi-text">Attendance aur test marks sab ek jagah dikh jaate hain. Parents bhi khush hain kyunki progress report directly milti hai unhe bhi.</p>
+      <div class="testi-divider"></div>
+      <div class="testi-author">
+        <div class="testi-avatar">P</div>
+        <div><div class="testi-name">Priya Gupta</div><div class="testi-role">Class 11 · Commerce</div></div>
+        <span class="testi-badge">✓ Verified</span>
+      </div>
     </div>
+
     <div class="testi-card reveal" style="transition-delay:.1s">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Fees reminder automatically aata hai, parents ko call nahi karni padti. Coaching ka image professional ho gaya hai bilkul.</p>
-      <div class="testi-author"><div class="testi-avatar">A</div><div><div class="testi-name">Arjun Mishra</div><div class="testi-role">JEE Aspirant</div></div></div>
+      <div class="testi-quote-icon">"</div>
+      <div class="testi-stars"><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <p class="testi-text">Mobile pe perfectly kaam karta hai. WhatsApp pe file dhoondna ab band ho gaya. Coaching ka image ekdum professional ho gaya hai!</p>
+      <div class="testi-divider"></div>
+      <div class="testi-author">
+        <div class="testi-avatar">A</div>
+        <div><div class="testi-name">Arjun Mishra</div><div class="testi-role">JEE Aspirant</div></div>
+        <span class="testi-badge">✓ Verified</span>
+      </div>
     </div>
+
     <div class="testi-card reveal" style="transition-delay:.15s">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Mobile pe perfectly kaam karta hai. Kabhi bhi koi bhi file download kar sakte hain. WhatsApp pe file dhoondna band ho gaya!</p>
-      <div class="testi-author"><div class="testi-avatar">S</div><div><div class="testi-name">Sneha Yadav</div><div class="testi-role">NEET Aspirant</div></div></div>
+      <div class="testi-quote-icon">"</div>
+      <div class="testi-stars"><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <p class="testi-text">Video lectures portal pe available hain. Revision ke liye baar baar dekh sakte hain. Bahut helpful hai exam ke waqt. Best coaching tool!</p>
+      <div class="testi-divider"></div>
+      <div class="testi-author">
+        <div class="testi-avatar">S</div>
+        <div><div class="testi-name">Sneha Yadav</div><div class="testi-role">NEET Aspirant</div></div>
+        <span class="testi-badge">✓ Verified</span>
+      </div>
     </div>
+
     <div class="testi-card reveal" style="transition-delay:.2s">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Assignment submission bhi portal pe hi hoti hai ab. Sir ke paas jaana nahi padta. Life ekdum easy ho gayi coaching ki.</p>
-      <div class="testi-author"><div class="testi-avatar">V</div><div><div class="testi-name">Vikram Singh</div><div class="testi-role">Class 10 · PCM</div></div></div>
+      <div class="testi-quote-icon">"</div>
+      <div class="testi-stars"><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <p class="testi-text">Fees payment ka record crystal clear hai. Receipt bhi portal se instantly download hoti hai. Koi argument hi nahi hota ab parents ke saath.</p>
+      <div class="testi-divider"></div>
+      <div class="testi-author">
+        <div class="testi-avatar">V</div>
+        <div><div class="testi-name">Vikram Singh</div><div class="testi-role">Class 10 · PCM</div></div>
+        <span class="testi-badge">✓ Verified</span>
+      </div>
     </div>
+
     <div class="testi-card reveal" style="transition-delay:.25s">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Pehle test marks ke liye wait karna padta tha, ab turant portal pe dikh jaate hain. Bahut transparent system hai yeh.</p>
-      <div class="testi-author"><div class="testi-avatar">N</div><div><div class="testi-name">Neha Pandey</div><div class="testi-role">Class 12 · PCB</div></div></div>
+      <div class="testi-quote-icon">"</div>
+      <div class="testi-stars"><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <p class="testi-text">Parents mere progress report directly portal pe dekh sakte hain. Ab unhe lagta hai main serious hoon. Motivation bhi automatically badhta hai!</p>
+      <div class="testi-divider"></div>
+      <div class="testi-author">
+        <div class="testi-avatar">M</div>
+        <div><div class="testi-name">Muskan Agarwal</div><div class="testi-role">Class 11 · PCM</div></div>
+        <span class="testi-badge">✓ Verified</span>
+      </div>
     </div>
-    <div class="testi-card reveal" style="transition-delay:.3s">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Batch schedule aur holiday notice sab portal pe milta hai. Koi confusion nahi rehti ab. Best decision tha is coaching ko join karna.</p>
-      <div class="testi-author"><div class="testi-avatar">K</div><div><div class="testi-name">Kartik Verma</div><div class="testi-role">IIT Aspirant</div></div></div>
-    </div>
-    <div class="testi-card reveal" style="transition-delay:.35s">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Parents mere progress report directly dekh sakte hain portal pe. Ab unhe lagta hai main serious hoon. Motivation bhi badhta hai!</p>
-      <div class="testi-author"><div class="testi-avatar">M</div><div><div class="testi-name">Muskan Agarwal</div><div class="testi-role">Class 11 · PCM</div></div></div>
-    </div>
-    <div class="testi-card reveal" style="transition-delay:.4s">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Video lectures bhi portal pe available hain. Revision ke liye baar baar dekh sakte hain. Bahut helpful hai exam time pe.</p>
-      <div class="testi-author"><div class="testi-avatar">D</div><div><div class="testi-name">Divya Tiwari</div><div class="testi-role">UPSC Prep</div></div></div>
-    </div>
-    <div class="testi-card reveal" style="transition-delay:.45s">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Fees payment ka record clear hai. Koi argument nahi hota ab. Receipt bhi portal se download ho jaati hai instantly.</p>
-      <div class="testi-author"><div class="testi-avatar">R</div><div><div class="testi-name">Rohit Kumar</div><div class="testi-role">Class 12 · Maths</div></div></div>
-    </div>
-    <div class="testi-card reveal" style="transition-delay:.5s">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Study material quality bahut achhi hai aur portal se milna easy hai. Notes print karne ki bhi suvidha hai. 10/10 recommend karunga.</p>
-      <div class="testi-author"><div class="testi-avatar">A</div><div><div class="testi-name">Ananya Joshi</div><div class="testi-role">Class 11 · Biology</div></div></div>
-    </div>
+
   </div>
 
-  <!-- Teachers panel -->
+  <!-- TEACHERS -->
   <div class="testimonials-panel" id="tab-teachers">
-    <div class="testi-card reveal">
-      <div class="testi-stars">★★★★★</div>
+
+    <div class="testi-card teacher reveal">
+      <div class="testi-quote-icon">"</div>
+      <div class="testi-stars"><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
       <p class="testi-text">Pehle 2 ghante attendance manage karne mein jaate the, ab 10 minute mein ho jaata hai. Devesh ne genuinely ek revolutionary tool banaya hai educators ke liye.</p>
-      <div class="testi-author"><div class="testi-avatar">S</div><div><div class="testi-name">Dr. Suresh Mathur</div><div class="testi-role">Mathematics Professor · 15 yrs exp</div></div></div>
+      <div class="testi-divider"></div>
+      <div class="testi-author">
+        <div class="testi-avatar">S</div>
+        <div><div class="testi-name">Dr. Suresh Mathur</div><div class="testi-role">Mathematics Professor · 15 yrs exp</div></div>
+        <span class="testi-badge">✓ Verified</span>
+      </div>
     </div>
-    <div class="testi-card reveal" style="transition-delay:.05s">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Maine apne 3 colleagues ko bhi recommend kiya. Fees collection aur reminder system itna smooth hai ki ab awkward conversations hi nahi hoti parents ke saath.</p>
-      <div class="testi-author"><div class="testi-avatar">R</div><div><div class="testi-name">Prof. Rekha Sharma</div><div class="testi-role">Physics Teacher · Delhi</div></div></div>
+
+    <div class="testi-card teacher reveal" style="transition-delay:.05s">
+      <div class="testi-quote-icon">"</div>
+      <div class="testi-stars"><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <p class="testi-text">Is portal ne meri coaching ki professional image completely change kar di. Student enrollment 40% badh gaya sirf ek saal mein. Best investment tha yeh.</p>
+      <div class="testi-divider"></div>
+      <div class="testi-author">
+        <div class="testi-avatar">A</div>
+        <div><div class="testi-name">Amit Bajpai</div><div class="testi-role">Coaching Owner · Lucknow</div></div>
+        <span class="testi-badge">✓ Verified</span>
+      </div>
     </div>
-    <div class="testi-card reveal" style="transition-delay:.1s">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Is portal ne meri coaching ki professional image completely change kar di. Parents ab seriously lete hain mujhe. Student enrollment 40% badh gaya ek saal mein.</p>
-      <div class="testi-author"><div class="testi-avatar">A</div><div><div class="testi-name">Amit Bajpai</div><div class="testi-role">Coaching Owner · Lucknow</div></div></div>
+
+    <div class="testi-card teacher reveal" style="transition-delay:.1s">
+      <div class="testi-quote-icon">"</div>
+      <div class="testi-stars"><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <p class="testi-text">Maine conference mein yeh portal demo kiya — 3 professors ne turant contact kiya. Genuinely proud feel hota hai is tool ko use karke. Excellent product!</p>
+      <div class="testi-divider"></div>
+      <div class="testi-author">
+        <div class="testi-avatar">R</div>
+        <div><div class="testi-name">Prof. Ramesh Chandra</div><div class="testi-role">University Faculty · Allahabad</div></div>
+        <span class="testi-badge">✓ Verified</span>
+      </div>
     </div>
-    <div class="testi-card reveal" style="transition-delay:.15s">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Study material upload bahut easy hai. Students bhi khush hain aur mujhe WhatsApp pe notes bhejne se chutti mili. Highly professional solution hai yeh.</p>
-      <div class="testi-author"><div class="testi-avatar">P</div><div><div class="testi-name">Pradeep Nair</div><div class="testi-role">Chemistry Faculty</div></div></div>
+
+    <div class="testi-card teacher reveal" style="transition-delay:.15s">
+      <div class="testi-quote-icon">"</div>
+      <div class="testi-stars"><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <p class="testi-text">5 saal free maintenance sun ke main convinced hua. Aaj 2 saal ho gaye — ek bhi major issue nahi. Devesh ka WhatsApp support bhi instant rehta hai.</p>
+      <div class="testi-divider"></div>
+      <div class="testi-author">
+        <div class="testi-avatar">K</div>
+        <div><div class="testi-name">Kuldeep Shukla</div><div class="testi-role">IIT-JEE Coaching · Patna</div></div>
+        <span class="testi-badge">✓ Verified</span>
+      </div>
     </div>
-    <div class="testi-card reveal" style="transition-delay:.2s">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Maine apne department mein presentation di is portal ke baare mein. Sare faculty members impressed the. Digital transformation ka yeh perfect example hai.</p>
-      <div class="testi-author"><div class="testi-avatar">V</div><div><div class="testi-name">Dr. Vandana Singh</div><div class="testi-role">HOD · Commerce Dept.</div></div></div>
+
+    <div class="testi-card teacher reveal" style="transition-delay:.2s">
+      <div class="testi-quote-icon">"</div>
+      <div class="testi-stars"><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <p class="testi-text">Parent-teacher communication itni smooth ho gayi. Parents portal pe sab dekh sakte hain — mujhe calls 70% kam aati hain ab. Time aur energy dono bachte hain!</p>
+      <div class="testi-divider"></div>
+      <div class="testi-author">
+        <div class="testi-avatar">S</div>
+        <div><div class="testi-name">Seema Dixit</div><div class="testi-role">Biology Teacher · Varanasi</div></div>
+        <span class="testi-badge">✓ Verified</span>
+      </div>
     </div>
-    <div class="testi-card reveal" style="transition-delay:.25s">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Progress tracking feature ne mujhe weak students identify karne mein help ki. Ab individually unhe extra attention de sakta hoon. Results clearly better hue hain.</p>
-      <div class="testi-author"><div class="testi-avatar">M</div><div><div class="testi-name">Manoj Tripathi</div><div class="testi-role">English Teacher · 12 yrs exp</div></div></div>
+
+    <div class="testi-card teacher reveal" style="transition-delay:.25s">
+      <div class="testi-quote-icon">"</div>
+      <div class="testi-stars"><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <p class="testi-text">Mujhe honestly nahi pata tha aise tools itne affordable price mein milte hain. Apne institute ke saare 6 teachers ko onboard karwaya maine. Sab bahut happy hain.</p>
+      <div class="testi-divider"></div>
+      <div class="testi-author">
+        <div class="testi-avatar">G</div>
+        <div><div class="testi-name">Govind Prasad</div><div class="testi-role">Institute Head · Agra</div></div>
+        <span class="testi-badge">✓ Verified</span>
+      </div>
     </div>
-    <div class="testi-card reveal" style="transition-delay:.3s">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Custom branding ki wajah se mere students ko lagta hai yeh kisi bade institute ka portal hai. Mere competitors se alag aur professional dikhta hai bilkul.</p>
-      <div class="testi-author"><div class="testi-avatar">N</div><div><div class="testi-name">Nidhi Agrawal</div><div class="testi-role">Coaching Director · Kanpur</div></div></div>
-    </div>
-    <div class="testi-card reveal" style="transition-delay:.35s">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Maine apni university ke teaching staff WhatsApp group mein share kiya tha — 8 professors ne adopt kiya abhi tak. Excellent product hai, excellent developer hai.</p>
-      <div class="testi-author"><div class="testi-avatar">R</div><div><div class="testi-name">Prof. Ramesh Chandra</div><div class="testi-role">University Faculty · Allahabad</div></div></div>
-    </div>
-    <div class="testi-card reveal" style="transition-delay:.4s">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">5 saal free maintenance sun ke main convinced hua tha. Aaj 2 saal ho gaye — ek bhi major issue nahi aaya. Devesh ka support bhi instant hai WhatsApp pe.</p>
-      <div class="testi-author"><div class="testi-avatar">K</div><div><div class="testi-name">Kuldeep Shukla</div><div class="testi-role">IIT-JEE Coaching · Patna</div></div></div>
-    </div>
-    <div class="testi-card reveal" style="transition-delay:.45s">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Parent-teacher communication itni smooth ho gayi hai. Parents portal pe sab dekh sakte hain — calls 70% kam ho gayi hain. Time bachta hai, energy bachti hai.</p>
-      <div class="testi-author"><div class="testi-avatar">S</div><div><div class="testi-name">Seema Dixit</div><div class="testi-role">Biology Teacher · Varanasi</div></div></div>
-    </div>
-    <div class="testi-card reveal" style="transition-delay:.5s">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Mujhe honestly nahi pata tha aise tools bante hain itne affordable price mein. Maine apne institute ke saare 6 teachers ko onboard karwaya. Sab happy hain.</p>
-      <div class="testi-author"><div class="testi-avatar">G</div><div><div class="testi-name">Govind Prasad</div><div class="testi-role">Institute Head · Agra</div></div></div>
-    </div>
-    <div class="testi-card reveal" style="transition-delay:.55s">
-      <div class="testi-stars">★★★★★</div>
-      <p class="testi-text">Conference mein maine yeh portal demo kiya tha — 3 professors ne turant contact kiya. Genuinely proud feel hota hai is tool ko use karke teaching mein.</p>
-      <div class="testi-author"><div class="testi-avatar">L</div><div><div class="testi-name">Dr. Lata Mishra</div><div class="testi-role">Asst. Professor · B.Ed. College</div></div></div>
-    </div>
+
   </div>
 </section>
 
-<!-- ══ BLOG ══ -->
+<!-- BLOG -->
 <section id="blog">
   <div class="section-label">// 05 — Insights</div>
   <h2 class="section-title">Articles &amp; Thoughts</h2>
   <div class="blog-grid">
-
     <div class="blog-card reveal">
       <div class="blog-top">
         <span class="blog-tag ai">AI / LLMs</span>
         <h3 class="blog-title">Why Every Coaching Center Needs a Digital Portal in 2025 — And What Happens If They Don't</h3>
-        <p class="blog-excerpt">The coaching industry is undergoing a silent digital revolution. Centers without a proper management portal are losing students to competitors who offer seamless digital experiences. Here's the data-backed reality.</p>
+        <p class="blog-excerpt">The coaching industry is undergoing a silent digital revolution. Centers without a proper management portal are losing students to competitors who offer seamless digital experiences.</p>
       </div>
-      <div class="blog-share">
-        <span class="share-badge prof">📌 Shared by Prof. Ramesh Chandra</span>
-        <span class="share-badge prof">📌 Dr. Lata Mishra</span>
-        <span class="share-badge prof">📌 3 others</span>
-      </div>
-      <div class="blog-meta">
-        <span class="blog-author">Devesh Tripathi · 8 min read</span>
-        <span class="blog-read">Read More →</span>
-      </div>
+      <div class="blog-share"><span class="share-badge prof">📌 Prof. Ramesh Chandra</span><span class="share-badge prof">📌 Dr. Lata Mishra</span><span class="share-badge prof">📌 3 others</span></div>
+      <div class="blog-meta"><span class="blog-author">Devesh Tripathi · 8 min read</span><span class="blog-read">Read More →</span></div>
     </div>
-
     <div class="blog-card reveal" style="transition-delay:.1s">
       <div class="blog-top">
         <span class="blog-tag ml">Machine Learning</span>
         <h3 class="blog-title">Building a Personalized Nutrition AI: Lessons from Training My First Real-World ML Model</h3>
-        <p class="blog-excerpt">From data collection to Streamlit deployment — what I learned building a nutrition recommendation engine that actually works. Including the 3 mistakes that cost me 2 weeks of debugging.</p>
+        <p class="blog-excerpt">From data collection to Streamlit deployment — what I learned building a nutrition recommendation engine that actually works, including the 3 mistakes that cost me 2 weeks.</p>
       </div>
-      <div class="blog-share">
-        <span class="share-badge prof">📌 Dr. Vandana Singh</span>
-        <span class="share-badge prof">📌 Prof. Suresh Mathur</span>
-      </div>
-      <div class="blog-meta">
-        <span class="blog-author">Devesh Tripathi · 12 min read</span>
-        <span class="blog-read">Read More →</span>
-      </div>
+      <div class="blog-share"><span class="share-badge prof">📌 Dr. Vandana Singh</span><span class="share-badge prof">📌 Prof. Suresh Mathur</span></div>
+      <div class="blog-meta"><span class="blog-author">Devesh Tripathi · 12 min read</span><span class="blog-read">Read More →</span></div>
     </div>
-
     <div class="blog-card reveal" style="transition-delay:.2s">
-      <div class="blog-top">
-        <span class="blog-tag python">Python / Django</span>
-        <h3 class="blog-title">Django vs Flask in 2025: Which Should You Choose for Your Backend? (With Real Benchmarks)</h3>
-        <p class="blog-excerpt">After building production apps in both — here is my honest, benchmark-backed comparison. Spoiler: the answer depends on 3 specific factors that most tutorials ignore completely.</p>
-      </div>
-      <div class="blog-share">
-        <span class="share-badge prof">📌 Kuldeep Shukla</span>
-        <span class="share-badge prof">📌 Amit Bajpai</span>
-        <span class="share-badge prof">📌 5 others</span>
-      </div>
-      <div class="blog-meta">
-        <span class="blog-author">Devesh Tripathi · 10 min read</span>
-        <span class="blog-read">Read More →</span>
-      </div>
-    </div>
-
-    <div class="blog-card reveal" style="transition-delay:.3s">
       <div class="blog-top">
         <span class="blog-tag edu">Education Tech</span>
         <h3 class="blog-title">How I Built Educare: From a Coaching Center's Pain Point to a 500+ User Platform</h3>
-        <p class="blog-excerpt">The story of how a simple observation — teachers wasting hours on WhatsApp groups — led me to build a full coaching management platform. The technical journey, the mistakes, and the lessons.</p>
+        <p class="blog-excerpt">The story of how a simple observation — teachers wasting hours on WhatsApp — led me to build a full coaching management platform used by 500+ centers across India.</p>
       </div>
-      <div class="blog-share">
-        <span class="share-badge prof">📌 Rekha Sharma</span>
-        <span class="share-badge prof">📌 Nidhi Agrawal</span>
-        <span class="share-badge prof">📌 7 others</span>
-      </div>
-      <div class="blog-meta">
-        <span class="blog-author">Devesh Tripathi · 15 min read</span>
-        <span class="blog-read">Read More →</span>
-      </div>
+      <div class="blog-share"><span class="share-badge prof">📌 Rekha Sharma</span><span class="share-badge prof">📌 Nidhi Agrawal</span><span class="share-badge prof">📌 7 others</span></div>
+      <div class="blog-meta"><span class="blog-author">Devesh Tripathi · 15 min read</span><span class="blog-read">Read More →</span></div>
     </div>
-
-    <div class="blog-card reveal" style="transition-delay:.4s">
-      <div class="blog-top">
-        <span class="blog-tag ai">NLP / AI</span>
-        <h3 class="blog-title">PDF Summarization with Python: The Architecture Behind My Streamlit App That Processes 100-Page Documents</h3>
-        <p class="blog-excerpt">Chunking strategy, embedding models, and why I chose this specific pipeline over GPT-4 direct calls. A deep technical walkthrough with code snippets and performance numbers.</p>
-      </div>
-      <div class="blog-share">
-        <span class="share-badge prof">📌 Pradeep Nair</span>
-        <span class="share-badge prof">📌 Manoj Tripathi</span>
-      </div>
-      <div class="blog-meta">
-        <span class="blog-author">Devesh Tripathi · 18 min read</span>
-        <span class="blog-read">Read More →</span>
-      </div>
-    </div>
-
-    <div class="blog-card reveal" style="transition-delay:.5s">
-      <div class="blog-top">
-        <span class="blog-tag ml">Career</span>
-        <h3 class="blog-title">From Student to Builder: How I Shipped 3 Real Products Before Graduating — No Excuses, No Shortcuts</h3>
-        <p class="blog-excerpt">The mindset shift that changed everything. Why most CS students never build anything real, and the exact framework I used to go from tutorial-follower to product-builder in under 8 months.</p>
-      </div>
-      <div class="blog-share">
-        <span class="share-badge prof">📌 Govind Prasad</span>
-        <span class="share-badge prof">📌 Seema Dixit</span>
-        <span class="share-badge prof">📌 4 others</span>
-      </div>
-      <div class="blog-meta">
-        <span class="blog-author">Devesh Tripathi · 9 min read</span>
-        <span class="blog-read">Read More →</span>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<!-- ══ ABOUT ══ -->
+<!-- ABOUT -->
 <section id="about">
   <div class="about-text">
     <div class="section-label">// 06 — Me</div>
     <h2 class="section-title" style="margin-bottom:28px">About Me</h2>
-    <p>Hey! I'm Devesh — a backend-focused software engineer with a passion for building intelligent systems that solve real problems. I work primarily with Python, Django, and Machine Learning.</p>
-    <p>I've shipped real products — from AI-powered tools to full coaching management platforms. I believe the best code is the one that makes someone's life genuinely easier.</p>
+    <p>Hey! I'm Devesh — a backend-focused software engineer passionate about building intelligent systems that solve real problems. I work primarily with Python, Django, and Machine Learning.</p>
+    <p>I've shipped real products — from AI-powered tools to full coaching management platforms used by 500+ centers. I believe the best code is the one that makes someone's life genuinely easier.</p>
     <p>When I'm not coding, I'm writing about what I've learned — and apparently professors are sharing it. That's the ultimate compliment.</p>
     <p class="about-accent">&gt; Always building. Always learning.</p>
   </div>
@@ -455,20 +436,18 @@
   </div>
 </section>
 
-<!-- ══ EDUCARE SALES ══ -->
+<!-- EDUCARE SALES -->
 <section id="educare">
   <div class="edu-badge"><span class="dot"></span>🎓 Ab Available — Educare Coaching Portal</div>
-
   <h2 class="edu-headline">
     <span class="white">Apni Coaching Ko</span>
     <span class="gold">Digital Banao.</span>
     <span class="white small">Ek Complete Portal — Sab Kuch Ek Jagah.</span>
   </h2>
-
-  <p class="edu-sub">Maine khud banaya hai — <strong>Educare</strong> — ek fully functional coaching management system. Ab aap isse apni coaching ke liye khareed sakte hain aur ek <strong>professional online presence</strong> bana sakte hain. Bina kisi developer ko baar baar paison diye.</p>
+  <p class="edu-sub">Maine khud banaya hai — <strong>Educare</strong> — ek fully functional coaching management system. Ab aap isse apni coaching ke liye khareed sakte hain aur ek <strong>professional online presence</strong> bana sakte hain.</p>
 
   <div class="edu-demo-wrap reveal">
-    <a href="https://edu-v2-lilac.vercel.app/" target="_blank" class="edu-demo-btn">
+    <a href="https://edu-v2-lilac.vercel.app/" target="_blank" rel="noopener" class="edu-demo-btn">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
       Live Demo Dekho — Pehle Try Karo, Phir Kharido
     </a>
@@ -489,12 +468,12 @@
   </div>
 
   <div class="edu-features">
-    <div class="edu-feat reveal"><div class="edu-feat-icon">🖥️</div><div class="edu-feat-title">Professional Website</div><div class="edu-feat-desc">Coaching ka apna website — courses, fees, contact sab dikhaye. Students impress honge.</div></div>
-    <div class="edu-feat reveal" style="transition-delay:.05s"><div class="edu-feat-icon">👨‍🎓</div><div class="edu-feat-title">Student Management</div><div class="edu-feat-desc">Enrollment, fees records, batch assignment — sab ek dashboard se manage karo.</div></div>
-    <div class="edu-feat reveal" style="transition-delay:.1s"><div class="edu-feat-icon">📚</div><div class="edu-feat-title">Study Material Upload</div><div class="edu-feat-desc">Notes, PDFs, videos directly portal pe upload karo. Students login karke download karein.</div></div>
+    <div class="edu-feat reveal"><div class="edu-feat-icon">🖥️</div><div class="edu-feat-title">Professional Website</div><div class="edu-feat-desc">Coaching ka apna website — courses, fees, contact sab dikhaye.</div></div>
+    <div class="edu-feat reveal" style="transition-delay:.05s"><div class="edu-feat-icon">👨‍🎓</div><div class="edu-feat-title">Student Management</div><div class="edu-feat-desc">Enrollment, fees records, batch assignment — sab ek dashboard se.</div></div>
+    <div class="edu-feat reveal" style="transition-delay:.1s"><div class="edu-feat-icon">📚</div><div class="edu-feat-title">Study Material Upload</div><div class="edu-feat-desc">Notes, PDFs, videos portal pe. Students login karke download karein.</div></div>
     <div class="edu-feat reveal" style="transition-delay:.15s"><div class="edu-feat-icon">📊</div><div class="edu-feat-title">Attendance &amp; Progress</div><div class="edu-feat-desc">Daily attendance, test marks, progress reports — parents bhi dekh sakein.</div></div>
     <div class="edu-feat reveal" style="transition-delay:.2s"><div class="edu-feat-icon">💳</div><div class="edu-feat-title">Fees Management</div><div class="edu-feat-desc">Pending fees alerts, payment records, auto reminders — manual kaam khatam.</div></div>
-    <div class="edu-feat reveal" style="transition-delay:.25s"><div class="edu-feat-icon">📱</div><div class="edu-feat-title">Mobile Friendly</div><div class="edu-feat-desc">Phone pe perfectly kaam karta hai. Students aur teachers dono ke liye easy.</div></div>
+    <div class="edu-feat reveal" style="transition-delay:.25s"><div class="edu-feat-icon">📱</div><div class="edu-feat-title">Mobile Friendly</div><div class="edu-feat-desc">Phone pe perfectly kaam karta hai. Teachers aur students dono ke liye easy.</div></div>
     <div class="edu-feat reveal" style="transition-delay:.3s"><div class="edu-feat-icon">🔒</div><div class="edu-feat-title">Secure Login System</div><div class="edu-feat-desc">Admin, teacher, student — alag roles aur permissions ke saath fully secure.</div></div>
     <div class="edu-feat reveal" style="transition-delay:.35s"><div class="edu-feat-icon">🎨</div><div class="edu-feat-title">Custom Branding</div><div class="edu-feat-desc">Aapki coaching ka naam, logo, colors — portal bilkul aapki identity le lega.</div></div>
   </div>
@@ -508,7 +487,7 @@
 
   <div class="urgency-strip reveal">
     <div class="urgency-icon">🔥</div>
-    <div class="urgency-text"><strong>Sirf 3 Slots Bache Hain!</strong> Is mahine sirf <strong>5 coaching centers</strong> ko personally onboard kar raha hoon. Slot full hone se pehle WhatsApp karo aur apni jagah pakki karo.</div>
+    <div class="urgency-text"><strong>Sirf 3 Slots Bache Hain!</strong> Is mahine sirf <strong>5 coaching centers</strong> ko personally onboard kar raha hoon. Slot full hone se pehle WhatsApp karo!</div>
     <div class="slots-pill" id="edu-slots">⚡ 3 Slots Remaining</div>
   </div>
 
@@ -538,7 +517,7 @@
         <li><span class="tick">✓</span> 1 Year Technical Support</li>
         <li><span class="tick">✓</span> Domain Setup Available (extra)</li>
       </ul>
-      <a class="buy-btn outline" href="https://wa.me/917080552397?text=Hii%20Devesh%2C%20mujhe%20Educare%20ka%20ANNUAL%20PLAN%20(%E2%82%B910%2C000%2Fyear)%20lena%20hai.%20Please%20details%20batao." target="_blank">
+      <a class="buy-btn outline" href="https://wa.me/917080552397?text=Hii%20Devesh%2C%20mujhe%20Educare%20ka%20ANNUAL%20PLAN%20(%E2%82%B910%2C000%2Fyear)%20lena%20hai." target="_blank" rel="noopener">
         <svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
         WhatsApp — ₹10,000/yr
       </a>
@@ -562,7 +541,7 @@
         <li><span class="tick-gold">★</span> Future Updates FREE</li>
         <li><span class="tick-gold">★</span> Domain Setup Available (extra)</li>
       </ul>
-      <a class="buy-btn solid" href="https://wa.me/917080552397?text=Hii%20Devesh%2C%20mujhe%20Educare%20ka%2010%20SAAL%20WALA%20PLAN%20(%E2%82%B925%2C000%20%2B%205%20Yr%20Free%20Maintenance)%20lena%20hai.%20Please%20full%20details%20aur%20demo%20dikhao." target="_blank">
+      <a class="buy-btn solid" href="https://wa.me/917080552397?text=Hii%20Devesh%2C%20mujhe%20Educare%20ka%2010%20SAAL%20WALA%20PLAN%20(%E2%82%B925%2C000%20%2B%205%20Yr%20Free%20Maintenance)%20lena%20hai." target="_blank" rel="noopener">
         <svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
         🔥 Buy Now — ₹25,000 / 10 Saal!
       </a>
@@ -571,11 +550,11 @@
 
   <div class="domain-note reveal">
     <div class="domain-note-icon">🌐</div>
-    <div class="domain-note-text"><strong>Domain Chahiye?</strong> Agar apna domain (jaise <em>yourcoaching.com</em>) chahiye, hum setup kar denge — thoda extra charge lagega. <strong>Domain price dono plans mein include nahi hai.</strong></div>
+    <div class="domain-note-text"><strong>Domain Chahiye?</strong> Apna domain (jaise <em>yourcoaching.com</em>) chahiye toh hum setup kar denge — thoda extra charge lagega. <strong>Domain price dono plans mein include nahi hai.</strong></div>
   </div>
 </section>
 
-<!-- ══ CONTACT ══ -->
+<!-- CONTACT -->
 <section id="contact">
   <div class="contact-inner reveal">
     <div class="section-label" style="text-align:center">// 07 — Let's Talk</div>
@@ -588,7 +567,7 @@
   </div>
 </section>
 
-<!-- ══ FOOTER ══ -->
+<!-- FOOTER -->
 <footer>
   <div class="footer-logo">DT</div>
   <div class="footer-links">

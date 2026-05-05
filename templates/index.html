@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Devesh Tripathi | Software Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -14,31 +14,28 @@
 </head>
 <body>
 
-<!-- LOADER -->
 <div id="loader">
   <div class="loader-logo">DT</div>
   <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
   <div class="loader-text">Initializing Portfolio...</div>
 </div>
 
-<!-- CURSOR -->
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
-<!-- WHATSAPP FLOAT -->
-<a class="wa-float" href="https://wa.me/917080552397?text=Hi%20Devesh!" target="_blank">
+<a class="wa-float" href="https://wa.me/917080552397?text=Hi%20Devesh!" target="_blank" rel="noopener">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
   <span class="wa-float-tip">Chat on WhatsApp</span>
 </a>
 
-<!-- NAV -->
 <nav>
   <div class="logo">DT</div>
   <ul class="nav-links">
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#testimonials">Reviews</a></li>
-    <li><a href="#blog">Blog</a></li>
+    <li><a href="#order-website">Order</a></li>
+    <li><a href="#mini-projects">Mini Projects</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#educare" class="nav-highlight">🎓 Educare</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -54,7 +51,7 @@
       <span class="accent">Intelligent</span>
       <span>Systems.</span>
     </h1>
-    <p class="hero-desc">Backend-focused developer crafting scalable, high-performance applications using Python, Java &amp; AI. Turning complex problems into elegant digital solutions.</p>
+    <p class="hero-desc">Backend-focused developer crafting scalable apps using Python, Java &amp; AI. Turning complex problems into elegant digital solutions.</p>
     <div class="hero-btns">
       <a href="#projects" class="btn-primary">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 3l14 9-14 9V3z"/></svg>
@@ -67,26 +64,12 @@
     </div>
   </div>
   <div class="hero-right">
-    <div class="ring ring-1"></div>
-    <div class="ring ring-2"></div>
-    <div class="ring ring-3"></div>
+    <div class="ring ring-1"></div><div class="ring ring-2"></div><div class="ring ring-3"></div>
     <div class="profile-wrap">
       <div class="float-tag">Python 🐍</div>
       <div class="float-tag">AI / ML</div>
       <div class="float-tag">Django</div>
-      <!-- ════════════════════════════════════════
-           PHOTO: Apni Google Drive photo ki
-           DIRECT link yahan paste karo:
-           Format: https://drive.google.com/uc?export=view&id=YOUR_FILE_ID
-           
-           Example: agar link hai
-           https://drive.google.com/file/d/ABC123xyz/view
-           toh src mein likhna:
-           https://drive.google.com/uc?export=view&id=ABC123xyz
-      ════════════════════════════════════════ -->
-      <img class="profile-photo"
-           src="{{ url_for('static', filename='profile.png') }}"
-           alt="Devesh Tripathi"/>
+      <img class="profile-photo" src="{{ url_for('static', filename='profile.png') }}" alt="Devesh Tripathi"/>
       <div class="profile-frame"></div>
     </div>
     <div class="photo-glow"></div>
@@ -101,60 +84,39 @@
   <div class="projects-grid">
 
     <div class="project-card reveal">
-      <div class="project-img-wrap">
-        <div class="project-img-placeholder">📄</div>
-      </div>
+      <div class="project-img-wrap"><div class="project-img-placeholder">📄</div></div>
       <div class="project-body">
         <h3 class="project-title">PDF Summarizer</h3>
-        <p class="project-desc">AI-powered NLP tool that intelligently condenses large PDF documents into clear, actionable summaries using advanced language models.</p>
-        <div class="tags">
-          <span class="tag">Python</span><span class="tag">NLP</span><span class="tag">Streamlit</span><span class="tag">AI</span>
-        </div>
+        <p class="project-desc">AI-powered NLP tool that condenses large PDFs into clear, actionable summaries using advanced language models.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">NLP</span><span class="tag">Streamlit</span><span class="tag">AI</span></div>
         <div class="project-links">
-          <a href="https://pdf-summarizer930.streamlit.app/" target="_blank" rel="noopener" class="project-link live">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            Live Demo
-          </a>
+          <a href="https://pdf-summarizer930.streamlit.app/" target="_blank" rel="noopener" class="project-link live">Live Demo ↗</a>
           <a href="https://github.com/deveshtripathiii/PDF-Summarizer" target="_blank" rel="noopener" class="project-link gh">GitHub ↗</a>
         </div>
       </div>
     </div>
 
     <div class="project-card reveal" style="transition-delay:.1s">
-      <div class="project-img-wrap">
-        <div class="project-img-placeholder">🥗</div>
-      </div>
+      <div class="project-img-wrap"><div class="project-img-placeholder">🥗</div></div>
       <div class="project-body">
         <h3 class="project-title">AI Nutrition App</h3>
-        <p class="project-desc">ML-based personalized diet recommendation system that analyzes user health data to suggest optimal, science-backed nutrition plans.</p>
-        <div class="tags">
-          <span class="tag">Python</span><span class="tag">ML</span><span class="tag">Streamlit</span>
-        </div>
+        <p class="project-desc">ML-based personalized diet recommendation system that analyzes user health data to suggest optimal nutrition plans.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">ML</span><span class="tag">Streamlit</span></div>
         <div class="project-links">
-          <a href="https://nutrition-app-930.streamlit.app/" target="_blank" rel="noopener" class="project-link live">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            Live Demo
-          </a>
+          <a href="https://nutrition-app-930.streamlit.app/" target="_blank" rel="noopener" class="project-link live">Live Demo ↗</a>
           <a href="#" class="project-link gh">GitHub ↗</a>
         </div>
       </div>
     </div>
 
     <div class="project-card reveal" style="transition-delay:.2s">
-      <div class="project-img-wrap">
-        <div class="project-img-placeholder">🎓</div>
-      </div>
+      <div class="project-img-wrap"><div class="project-img-placeholder">🎓</div></div>
       <div class="project-body">
         <h3 class="project-title">Educare Coaching Portal</h3>
-        <p class="project-desc">Full-stack coaching management system — student management, fees tracking, study material upload, attendance &amp; parent portal.</p>
-        <div class="tags">
-          <span class="tag">Django</span><span class="tag">MySQL</span><span class="tag">REST API</span><span class="tag">Python</span>
-        </div>
+        <p class="project-desc">Full-stack coaching management system — student management, fees tracking, study material, attendance &amp; parent portal.</p>
+        <div class="tags"><span class="tag">Django</span><span class="tag">MySQL</span><span class="tag">REST API</span><span class="tag">Python</span></div>
         <div class="project-links">
-          <a href="https://edu-v2-lilac.vercel.app/" target="_blank" rel="noopener" class="project-link live">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            Live Demo
-          </a>
+          <a href="https://edu-v2-lilac.vercel.app/" target="_blank" rel="noopener" class="project-link live">Live Demo ↗</a>
           <a href="#educare" class="project-link gh">Buy Now ★</a>
         </div>
       </div>
@@ -184,22 +146,22 @@
   <div class="section-label">// 03 — Achievements</div>
   <h2 class="section-title">Certificates</h2>
   <div class="certs-grid">
-    <a href="https://www.linkedin.com/posts/devesh-tripathi-176859203_successfully-completed-3-day-workshop-activity-7402553856615886848-tp-l" target="_blank" class="cert-card reveal">
+    <a href="https://www.linkedin.com/posts/devesh-tripathi-176859203_successfully-completed-3-day-workshop-activity-7402553856615886848-tp-l" target="_blank" rel="noopener" class="cert-card reveal">
       <div class="cert-num">01</div><div><div class="cert-title">Workshop Certificate (3-Day Program)</div><div class="cert-view">View on LinkedIn →</div></div>
     </a>
-    <a href="https://www.linkedin.com/posts/devesh-tripathi-176859203_turtlemint-activity-7363411431263752193-iAM6" target="_blank" class="cert-card reveal" style="transition-delay:.05s">
+    <a href="https://www.linkedin.com/posts/devesh-tripathi-176859203_turtlemint-activity-7363411431263752193-iAM6" target="_blank" rel="noopener" class="cert-card reveal" style="transition-delay:.05s">
       <div class="cert-num">02</div><div><div class="cert-title">Turtlemint Certification</div><div class="cert-view">View on LinkedIn →</div></div>
     </a>
-    <a href="https://www.linkedin.com/posts/devesh-tripathi-176859203_certificate-activity-7255641523579494400-v2qc" target="_blank" class="cert-card reveal" style="transition-delay:.1s">
+    <a href="https://www.linkedin.com/posts/devesh-tripathi-176859203_certificate-activity-7255641523579494400-v2qc" target="_blank" rel="noopener" class="cert-card reveal" style="transition-delay:.1s">
       <div class="cert-num">03</div><div><div class="cert-title">General Certificate Achievement</div><div class="cert-view">View on LinkedIn →</div></div>
     </a>
-    <a href="https://www.linkedin.com/posts/devesh-tripathi-176859203_worked-as-social-worker-i-am-happy-to-post-activity-7242574487097909250-3wCc" target="_blank" class="cert-card reveal" style="transition-delay:.15s">
+    <a href="https://www.linkedin.com/posts/devesh-tripathi-176859203_worked-as-social-worker-i-am-happy-to-post-activity-7242574487097909250-3wCc" target="_blank" rel="noopener" class="cert-card reveal" style="transition-delay:.15s">
       <div class="cert-num">04</div><div><div class="cert-title">Social Work Experience</div><div class="cert-view">View on LinkedIn →</div></div>
     </a>
-    <a href="https://www.linkedin.com/posts/devesh-tripathi-176859203_learning-activity-7208143845539106816-YFT8" target="_blank" class="cert-card reveal" style="transition-delay:.2s">
+    <a href="https://www.linkedin.com/posts/devesh-tripathi-176859203_learning-activity-7208143845539106816-YFT8" target="_blank" rel="noopener" class="cert-card reveal" style="transition-delay:.2s">
       <div class="cert-num">05</div><div><div class="cert-title">Learning Achievement</div><div class="cert-view">View on LinkedIn →</div></div>
     </a>
-    <a href="https://www.linkedin.com/posts/devesh-tripathi-176859203_internship-professionaldevelopment-learningjourney-activity-7207288702333571073--oTm" target="_blank" class="cert-card reveal" style="transition-delay:.25s">
+    <a href="https://www.linkedin.com/posts/devesh-tripathi-176859203_internship-professionaldevelopment-learningjourney-activity-7207288702333571073--oTm" target="_blank" rel="noopener" class="cert-card reveal" style="transition-delay:.25s">
       <div class="cert-num">06</div><div><div class="cert-title">Internship &amp; Professional Development</div><div class="cert-view">View on LinkedIn →</div></div>
     </a>
   </div>
@@ -212,9 +174,9 @@
 
   <div class="social-proof-strip reveal">
     <div class="proof-stat"><div class="proof-stat-num">500+</div><div class="proof-stat-label">Educare Sold</div></div>
-    <div class="proof-stat"><div class="proof-stat-num">98%</div><div class="proof-stat-label">Satisfaction Rate</div></div>
+    <div class="proof-stat"><div class="proof-stat-num">98%</div><div class="proof-stat-label">Satisfaction</div></div>
     <div class="proof-stat"><div class="proof-stat-num">200+</div><div class="proof-stat-label">Happy Teachers</div></div>
-    <div class="proof-stat"><div class="proof-stat-num">50+</div><div class="proof-stat-label">Coaching Centers</div></div>
+    <div class="proof-stat"><div class="proof-stat-num">50+</div><div class="proof-stat-label">Centers</div></div>
   </div>
 
   <div class="testimonials-tabs">
@@ -222,198 +184,290 @@
     <button class="tab-btn" data-tab="tab-teachers">👩‍🏫 Teachers</button>
   </div>
 
-  <!-- STUDENTS -->
   <div class="testimonials-panel active" id="tab-students">
 
-    <div class="testi-card reveal">
+    {% set students = [
+      ('R','Rahul Sharma','Class 12 · Science','Pehle notes ke liye sir ke paas jaana padta tha, ab seedha portal se download kar leta hoon. Bahut time bachta hai aur sab organized hai.'),
+      ('P','Priya Gupta','Class 11 · Commerce','Attendance aur test marks sab ek jagah dikh jaate hain. Parents bhi khush hain kyunki progress report directly milti hai unhe bhi.'),
+      ('A','Arjun Mishra','JEE Aspirant','Mobile pe perfectly kaam karta hai. WhatsApp pe file dhoondna ab band ho gaya. Coaching ka image ekdum professional ho gaya!'),
+      ('S','Sneha Yadav','NEET Aspirant','Video lectures portal pe available hain. Revision ke liye baar baar dekh sakte hain. Bahut helpful hai exam ke waqt. Best tool!'),
+      ('V','Vikram Singh','Class 10 · PCM','Fees payment ka record crystal clear hai. Receipt bhi portal se instantly download hoti hai. Koi argument nahi hota ab.'),
+      ('M','Muskan Agarwal','Class 11 · PCM','Parents mere progress report directly portal pe dekh sakte hain. Ab unhe lagta hai main serious hoon. Motivation bhi badhta hai!')
+    ] %}
+
+    {% for initial, name, role, text in students %}
+    <div class="testi-card reveal" style="transition-delay:{{ loop.index0 * 0.05 }}s">
       <div class="testi-quote-icon">"</div>
       <div class="testi-stars">
-        <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        {% for i in range(5) %}<svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>{% endfor %}
       </div>
-      <p class="testi-text">Pehle notes ke liye sir ke paas jaana padta tha, ab seedha portal se download kar leta hoon. Bahut time bachta hai aur sab organized hai.</p>
+      <p class="testi-text">{{ text }}</p>
       <div class="testi-divider"></div>
       <div class="testi-author">
-        <div class="testi-avatar">R</div>
-        <div><div class="testi-name">Rahul Sharma</div><div class="testi-role">Class 12 · Science</div></div>
+        <div class="testi-avatar">{{ initial }}</div>
+        <div><div class="testi-name">{{ name }}</div><div class="testi-role">{{ role }}</div></div>
         <span class="testi-badge">✓ Verified</span>
       </div>
     </div>
+    {% endfor %}
 
-    <div class="testi-card reveal" style="transition-delay:.05s">
+  </div>
+
+  <div class="testimonials-panel" id="tab-teachers">
+
+    {% set teachers = [
+      ('S','Dr. Suresh Mathur','Mathematics Professor · 15 yrs','Pehle 2 ghante attendance manage karne mein jaate the, ab 10 minute mein ho jaata hai. Devesh ne genuinely ek revolutionary tool banaya hai educators ke liye.'),
+      ('A','Amit Bajpai','Coaching Owner · Lucknow','Is portal ne meri coaching ki professional image completely change kar di. Student enrollment 40% badh gaya sirf ek saal mein. Best investment tha yeh.'),
+      ('R','Prof. Ramesh Chandra','University Faculty · Allahabad','Maine conference mein yeh portal demo kiya — 3 professors ne turant contact kiya. Genuinely proud feel hota hai is tool ko use karke. Excellent!'),
+      ('K','Kuldeep Shukla','IIT-JEE Coaching · Patna','5 saal free maintenance sun ke main convinced hua. Aaj 2 saal ho gaye — ek bhi major issue nahi. Devesh ka WhatsApp support bhi instant rehta hai.'),
+      ('S','Seema Dixit','Biology Teacher · Varanasi','Parent-teacher communication itni smooth ho gayi. Parents portal pe sab dekh sakte hain — mujhe calls 70% kam aati hain ab. Time aur energy dono bachte hain!'),
+      ('G','Govind Prasad','Institute Head · Agra','Mujhe honestly nahi pata tha aise tools itne affordable mein milte hain. Apne institute ke saare 6 teachers ko onboard karwaya. Sab bahut happy hain.')
+    ] %}
+
+    {% for initial, name, role, text in teachers %}
+    <div class="testi-card teacher reveal" style="transition-delay:{{ loop.index0 * 0.05 }}s">
       <div class="testi-quote-icon">"</div>
-      <div class="testi-stars"><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <p class="testi-text">Attendance aur test marks sab ek jagah dikh jaate hain. Parents bhi khush hain kyunki progress report directly milti hai unhe bhi.</p>
+      <div class="testi-stars">
+        {% for i in range(5) %}<svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>{% endfor %}
+      </div>
+      <p class="testi-text">{{ text }}</p>
       <div class="testi-divider"></div>
       <div class="testi-author">
-        <div class="testi-avatar">P</div>
-        <div><div class="testi-name">Priya Gupta</div><div class="testi-role">Class 11 · Commerce</div></div>
+        <div class="testi-avatar">{{ initial }}</div>
+        <div><div class="testi-name">{{ name }}</div><div class="testi-role">{{ role }}</div></div>
         <span class="testi-badge">✓ Verified</span>
       </div>
     </div>
+    {% endfor %}
 
-    <div class="testi-card reveal" style="transition-delay:.1s">
-      <div class="testi-quote-icon">"</div>
-      <div class="testi-stars"><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <p class="testi-text">Mobile pe perfectly kaam karta hai. WhatsApp pe file dhoondna ab band ho gaya. Coaching ka image ekdum professional ho gaya hai!</p>
-      <div class="testi-divider"></div>
-      <div class="testi-author">
-        <div class="testi-avatar">A</div>
-        <div><div class="testi-name">Arjun Mishra</div><div class="testi-role">JEE Aspirant</div></div>
-        <span class="testi-badge">✓ Verified</span>
-      </div>
+  </div>
+</section>
+
+<!-- ORDER WEBSITE SECTION -->
+<section id="order-website">
+  <div class="section-label">// 05 — Get Built</div>
+  <h2 class="section-title">Order Your Website</h2>
+
+  <div class="order-grid">
+    <div class="order-left reveal">
+      <h3>Apni <span>Professional</span> Website<br/>Banwao — Aaj Hi!</h3>
+      <p>Coaching portal, business website, portfolio, ecommerce — jo bhi chahiye. Main personally design aur develop karta hoon. Koi middleman nahi, seedha developer se kaam.</p>
+      <ul class="order-points">
+        <li><span class="op-icon">✓</span> Custom design — exactly jaisi aap chahein</li>
+        <li><span class="op-icon">✓</span> Mobile + Desktop — dono pe perfect</li>
+        <li><span class="op-icon">✓</span> Fast delivery — 3 to 7 days</li>
+        <li><span class="op-icon">✓</span> Free revisions until satisfied</li>
+        <li><span class="op-icon">✓</span> Domain + Hosting setup included</li>
+        <li><span class="op-icon">✓</span> WhatsApp support after delivery</li>
+      </ul>
+      <a href="https://wa.me/917080552397?text=Hii%20Devesh%2C%20mujhe%20ek%20website%20banwani%20hai.%20Please%20details%20aur%20pricing%20batao." target="_blank" rel="noopener" class="order-wa-btn">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        WhatsApp Karo — Free Consultation
+      </a>
     </div>
 
-    <div class="testi-card reveal" style="transition-delay:.15s">
-      <div class="testi-quote-icon">"</div>
-      <div class="testi-stars"><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <p class="testi-text">Video lectures portal pe available hain. Revision ke liye baar baar dekh sakte hain. Bahut helpful hai exam ke waqt. Best coaching tool!</p>
-      <div class="testi-divider"></div>
-      <div class="testi-author">
-        <div class="testi-avatar">S</div>
-        <div><div class="testi-name">Sneha Yadav</div><div class="testi-role">NEET Aspirant</div></div>
-        <span class="testi-badge">✓ Verified</span>
+    <div class="order-types reveal" style="transition-delay:.1s">
+      <div class="order-type-card">
+        <div class="order-type-icon">🏫</div>
+        <div class="order-type-name">Coaching Portal</div>
+        <div class="order-type-price">₹10k – ₹25k</div>
+        <div class="order-type-desc">Student management, fees, attendance, notes — sab kuch</div>
+      </div>
+      <div class="order-type-card">
+        <div class="order-type-icon">🏢</div>
+        <div class="order-type-name">Business Website</div>
+        <div class="order-type-price">₹3k – ₹8k</div>
+        <div class="order-type-desc">Professional landing page with contact, services &amp; portfolio</div>
+      </div>
+      <div class="order-type-card">
+        <div class="order-type-icon">🛒</div>
+        <div class="order-type-name">E-Commerce Store</div>
+        <div class="order-type-price">₹8k – ₹20k</div>
+        <div class="order-type-desc">Product listing, cart, orders — full shopping experience</div>
+      </div>
+      <div class="order-type-card">
+        <div class="order-type-icon">🤖</div>
+        <div class="order-type-name">AI-Powered App</div>
+        <div class="order-type-price">₹5k – ₹15k</div>
+        <div class="order-type-desc">Chatbot, summarizer, recommender — custom AI tools</div>
+      </div>
+      <div class="order-type-card">
+        <div class="order-type-icon">👤</div>
+        <div class="order-type-name">Portfolio Website</div>
+        <div class="order-type-price">₹2k – ₹5k</div>
+        <div class="order-type-desc">Premium personal portfolio like this one — stand out!</div>
+      </div>
+      <div class="order-type-card">
+        <div class="order-type-icon">🏥</div>
+        <div class="order-type-name">Custom Web App</div>
+        <div class="order-type-price">₹10k+</div>
+        <div class="order-type-desc">Hospital system, booking app, dashboard — anything custom</div>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="testi-card reveal" style="transition-delay:.2s">
-      <div class="testi-quote-icon">"</div>
-      <div class="testi-stars"><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <p class="testi-text">Fees payment ka record crystal clear hai. Receipt bhi portal se instantly download hoti hai. Koi argument hi nahi hota ab parents ke saath.</p>
-      <div class="testi-divider"></div>
-      <div class="testi-author">
-        <div class="testi-avatar">V</div>
-        <div><div class="testi-name">Vikram Singh</div><div class="testi-role">Class 10 · PCM</div></div>
-        <span class="testi-badge">✓ Verified</span>
+<!-- MINI PROJECTS SECTION -->
+<section id="mini-projects">
+  <div class="section-label">// 06 — Quick Projects</div>
+  <h2 class="section-title">Mini Projects Order</h2>
+  <p class="mini-intro">College assignment, internship project, ya sirf kuch seekhna chahte ho? <strong>Ready-made ya custom mini projects</strong> — 24-48 ghante mein deliver. Source code + documentation included.</p>
+
+  <div class="mini-grid">
+
+    <div class="mini-card blue reveal">
+      <div class="mini-card-top">
+        <div class="mini-icon">📄</div>
+        <div><div class="mini-price">₹499</div><div class="mini-price-label">Starting</div></div>
       </div>
+      <div class="mini-name">PDF Summarizer</div>
+      <div class="mini-desc">AI-powered PDF summarization tool using NLP. Perfect for college assignments.</div>
+      <ul class="mini-features">
+        <li>Python + Streamlit</li>
+        <li>NLP / HuggingFace</li>
+        <li>Full source code + docs</li>
+      </ul>
+      <a href="https://wa.me/917080552397?text=Hii%20Devesh%2C%20mujhe%20PDF%20Summarizer%20mini%20project%20chahiye.%20Please%20details%20batao." target="_blank" rel="noopener" class="mini-order-btn">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Order Now
+      </a>
     </div>
 
-    <div class="testi-card reveal" style="transition-delay:.25s">
-      <div class="testi-quote-icon">"</div>
-      <div class="testi-stars"><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <p class="testi-text">Parents mere progress report directly portal pe dekh sakte hain. Ab unhe lagta hai main serious hoon. Motivation bhi automatically badhta hai!</p>
-      <div class="testi-divider"></div>
-      <div class="testi-author">
-        <div class="testi-avatar">M</div>
-        <div><div class="testi-name">Muskan Agarwal</div><div class="testi-role">Class 11 · PCM</div></div>
-        <span class="testi-badge">✓ Verified</span>
+    <div class="mini-card purple reveal" style="transition-delay:.06s">
+      <div class="mini-card-top">
+        <div class="mini-icon">🥗</div>
+        <div><div class="mini-price">₹599</div><div class="mini-price-label">Starting</div></div>
       </div>
+      <div class="mini-name">Nutrition Recommender</div>
+      <div class="mini-desc">ML-based diet recommendation system with user input and personalized suggestions.</div>
+      <ul class="mini-features">
+        <li>Python + Scikit-learn</li>
+        <li>Streamlit UI</li>
+        <li>Dataset + model included</li>
+      </ul>
+      <a href="https://wa.me/917080552397?text=Hii%20Devesh%2C%20mujhe%20Nutrition%20Recommender%20mini%20project%20chahiye." target="_blank" rel="noopener" class="mini-order-btn">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Order Now
+      </a>
+    </div>
+
+    <div class="mini-card green reveal" style="transition-delay:.12s">
+      <div class="mini-card-top">
+        <div class="mini-icon">🏥</div>
+        <div><div class="mini-price">₹799</div><div class="mini-price-label">Starting</div></div>
+      </div>
+      <div class="mini-name">Hospital Management</div>
+      <div class="mini-desc">Django-based hospital system with patient records, appointments and doctor dashboard.</div>
+      <ul class="mini-features">
+        <li>Django + MySQL</li>
+        <li>Admin + Doctor panels</li>
+        <li>Full CRUD operations</li>
+      </ul>
+      <a href="https://wa.me/917080552397?text=Hii%20Devesh%2C%20mujhe%20Hospital%20Management%20mini%20project%20chahiye." target="_blank" rel="noopener" class="mini-order-btn">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Order Now
+      </a>
+    </div>
+
+    <div class="mini-card gold reveal" style="transition-delay:.18s">
+      <div class="mini-card-top">
+        <div class="mini-icon">💬</div>
+        <div><div class="mini-price">₹699</div><div class="mini-price-label">Starting</div></div>
+      </div>
+      <div class="mini-name">AI Chatbot</div>
+      <div class="mini-desc">Custom AI chatbot using Python + OpenAI/Gemini API. Can be added to any website.</div>
+      <ul class="mini-features">
+        <li>Python + Flask/Streamlit</li>
+        <li>OpenAI or Gemini API</li>
+        <li>Embeddable widget</li>
+      </ul>
+      <a href="https://wa.me/917080552397?text=Hii%20Devesh%2C%20mujhe%20AI%20Chatbot%20mini%20project%20chahiye." target="_blank" rel="noopener" class="mini-order-btn">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Order Now
+      </a>
+    </div>
+
+    <div class="mini-card red reveal" style="transition-delay:.24s">
+      <div class="mini-card-top">
+        <div class="mini-icon">📊</div>
+        <div><div class="mini-price">₹399</div><div class="mini-price-label">Starting</div></div>
+      </div>
+      <div class="mini-name">Data Analysis Dashboard</div>
+      <div class="mini-desc">Interactive data visualization dashboard with charts, filters and insights using your CSV/Excel data.</div>
+      <ul class="mini-features">
+        <li>Python + Pandas + Plotly</li>
+        <li>Streamlit dashboard</li>
+        <li>Custom dataset support</li>
+      </ul>
+      <a href="https://wa.me/917080552397?text=Hii%20Devesh%2C%20mujhe%20Data%20Analysis%20Dashboard%20mini%20project%20chahiye." target="_blank" rel="noopener" class="mini-order-btn">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Order Now
+      </a>
+    </div>
+
+    <div class="mini-card cyan reveal" style="transition-delay:.3s">
+      <div class="mini-card-top">
+        <div class="mini-icon">🔧</div>
+        <div><div class="mini-price">₹299+</div><div class="mini-price-label">Custom</div></div>
+      </div>
+      <div class="mini-name">Custom Project</div>
+      <div class="mini-desc">Kuch aur chahiye? Java, C++, Python, Web — apni requirement batao, main banata hoon!</div>
+      <ul class="mini-features">
+        <li>Any language / framework</li>
+        <li>Price depends on scope</li>
+        <li>24-48 hr delivery</li>
+      </ul>
+      <a href="https://wa.me/917080552397?text=Hii%20Devesh%2C%20mujhe%20ek%20custom%20mini%20project%20banwana%20hai.%20Details%20discuss%20karna%20hai." target="_blank" rel="noopener" class="mini-order-btn">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Discuss Now
+      </a>
     </div>
 
   </div>
 
-  <!-- TEACHERS -->
-  <div class="testimonials-panel" id="tab-teachers">
-
-    <div class="testi-card teacher reveal">
-      <div class="testi-quote-icon">"</div>
-      <div class="testi-stars"><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <p class="testi-text">Pehle 2 ghante attendance manage karne mein jaate the, ab 10 minute mein ho jaata hai. Devesh ne genuinely ek revolutionary tool banaya hai educators ke liye.</p>
-      <div class="testi-divider"></div>
-      <div class="testi-author">
-        <div class="testi-avatar">S</div>
-        <div><div class="testi-name">Dr. Suresh Mathur</div><div class="testi-role">Mathematics Professor · 15 yrs exp</div></div>
-        <span class="testi-badge">✓ Verified</span>
-      </div>
+  <div class="mini-cta-strip reveal">
+    <div class="mini-cta-text">
+      <h4>Apni Requirement Batao</h4>
+      <p>Koi bhi project — college, internship, ya personal — WhatsApp pe discuss karo. 24 ghante mein quote milega.</p>
     </div>
-
-    <div class="testi-card teacher reveal" style="transition-delay:.05s">
-      <div class="testi-quote-icon">"</div>
-      <div class="testi-stars"><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <p class="testi-text">Is portal ne meri coaching ki professional image completely change kar di. Student enrollment 40% badh gaya sirf ek saal mein. Best investment tha yeh.</p>
-      <div class="testi-divider"></div>
-      <div class="testi-author">
-        <div class="testi-avatar">A</div>
-        <div><div class="testi-name">Amit Bajpai</div><div class="testi-role">Coaching Owner · Lucknow</div></div>
-        <span class="testi-badge">✓ Verified</span>
-      </div>
-    </div>
-
-    <div class="testi-card teacher reveal" style="transition-delay:.1s">
-      <div class="testi-quote-icon">"</div>
-      <div class="testi-stars"><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <p class="testi-text">Maine conference mein yeh portal demo kiya — 3 professors ne turant contact kiya. Genuinely proud feel hota hai is tool ko use karke. Excellent product!</p>
-      <div class="testi-divider"></div>
-      <div class="testi-author">
-        <div class="testi-avatar">R</div>
-        <div><div class="testi-name">Prof. Ramesh Chandra</div><div class="testi-role">University Faculty · Allahabad</div></div>
-        <span class="testi-badge">✓ Verified</span>
-      </div>
-    </div>
-
-    <div class="testi-card teacher reveal" style="transition-delay:.15s">
-      <div class="testi-quote-icon">"</div>
-      <div class="testi-stars"><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <p class="testi-text">5 saal free maintenance sun ke main convinced hua. Aaj 2 saal ho gaye — ek bhi major issue nahi. Devesh ka WhatsApp support bhi instant rehta hai.</p>
-      <div class="testi-divider"></div>
-      <div class="testi-author">
-        <div class="testi-avatar">K</div>
-        <div><div class="testi-name">Kuldeep Shukla</div><div class="testi-role">IIT-JEE Coaching · Patna</div></div>
-        <span class="testi-badge">✓ Verified</span>
-      </div>
-    </div>
-
-    <div class="testi-card teacher reveal" style="transition-delay:.2s">
-      <div class="testi-quote-icon">"</div>
-      <div class="testi-stars"><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <p class="testi-text">Parent-teacher communication itni smooth ho gayi. Parents portal pe sab dekh sakte hain — mujhe calls 70% kam aati hain ab. Time aur energy dono bachte hain!</p>
-      <div class="testi-divider"></div>
-      <div class="testi-author">
-        <div class="testi-avatar">S</div>
-        <div><div class="testi-name">Seema Dixit</div><div class="testi-role">Biology Teacher · Varanasi</div></div>
-        <span class="testi-badge">✓ Verified</span>
-      </div>
-    </div>
-
-    <div class="testi-card teacher reveal" style="transition-delay:.25s">
-      <div class="testi-quote-icon">"</div>
-      <div class="testi-stars"><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <p class="testi-text">Mujhe honestly nahi pata tha aise tools itne affordable price mein milte hain. Apne institute ke saare 6 teachers ko onboard karwaya maine. Sab bahut happy hain.</p>
-      <div class="testi-divider"></div>
-      <div class="testi-author">
-        <div class="testi-avatar">G</div>
-        <div><div class="testi-name">Govind Prasad</div><div class="testi-role">Institute Head · Agra</div></div>
-        <span class="testi-badge">✓ Verified</span>
-      </div>
-    </div>
-
+    <a href="https://wa.me/917080552397?text=Hii%20Devesh%2C%20mujhe%20ek%20project%20banwana%20hai.%20Discuss%20karna%20hai." target="_blank" rel="noopener" class="mini-cta-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.08 6.08l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      WhatsApp pe Order Karo
+    </a>
   </div>
 </section>
 
 <!-- BLOG -->
 <section id="blog">
-  <div class="section-label">// 05 — Insights</div>
+  <div class="section-label">// 07 — Insights</div>
   <h2 class="section-title">Articles &amp; Thoughts</h2>
   <div class="blog-grid">
     <div class="blog-card reveal">
       <div class="blog-top">
         <span class="blog-tag ai">AI / LLMs</span>
-        <h3 class="blog-title">Why Every Coaching Center Needs a Digital Portal in 2025 — And What Happens If They Don't</h3>
-        <p class="blog-excerpt">The coaching industry is undergoing a silent digital revolution. Centers without a proper management portal are losing students to competitors who offer seamless digital experiences.</p>
+        <h3 class="blog-title">Why Every Coaching Center Needs a Digital Portal in 2025</h3>
+        <p class="blog-excerpt">The coaching industry is undergoing a silent digital revolution. Centers without a proper portal are losing students to competitors who offer seamless digital experiences.</p>
       </div>
-      <div class="blog-share"><span class="share-badge prof">📌 Prof. Ramesh Chandra</span><span class="share-badge prof">📌 Dr. Lata Mishra</span><span class="share-badge prof">📌 3 others</span></div>
-      <div class="blog-meta"><span class="blog-author">Devesh Tripathi · 8 min read</span><span class="blog-read">Read More →</span></div>
+      <div class="blog-share"><span class="share-badge">📌 Prof. Ramesh Chandra</span><span class="share-badge">📌 Dr. Lata Mishra</span><span class="share-badge">📌 3 others</span></div>
+      <div class="blog-meta"><span class="blog-author">Devesh Tripathi · 8 min</span><span class="blog-read">Read →</span></div>
     </div>
     <div class="blog-card reveal" style="transition-delay:.1s">
       <div class="blog-top">
         <span class="blog-tag ml">Machine Learning</span>
-        <h3 class="blog-title">Building a Personalized Nutrition AI: Lessons from Training My First Real-World ML Model</h3>
-        <p class="blog-excerpt">From data collection to Streamlit deployment — what I learned building a nutrition recommendation engine that actually works, including the 3 mistakes that cost me 2 weeks.</p>
+        <h3 class="blog-title">Building a Personalized Nutrition AI: Lessons from My First Real ML Model</h3>
+        <p class="blog-excerpt">From data collection to Streamlit deployment — what I learned building a nutrition recommendation engine, including the 3 mistakes that cost me 2 weeks.</p>
       </div>
-      <div class="blog-share"><span class="share-badge prof">📌 Dr. Vandana Singh</span><span class="share-badge prof">📌 Prof. Suresh Mathur</span></div>
-      <div class="blog-meta"><span class="blog-author">Devesh Tripathi · 12 min read</span><span class="blog-read">Read More →</span></div>
+      <div class="blog-share"><span class="share-badge">📌 Dr. Vandana Singh</span><span class="share-badge">📌 Prof. Suresh Mathur</span></div>
+      <div class="blog-meta"><span class="blog-author">Devesh Tripathi · 12 min</span><span class="blog-read">Read →</span></div>
     </div>
     <div class="blog-card reveal" style="transition-delay:.2s">
       <div class="blog-top">
         <span class="blog-tag edu">Education Tech</span>
-        <h3 class="blog-title">How I Built Educare: From a Coaching Center's Pain Point to a 500+ User Platform</h3>
-        <p class="blog-excerpt">The story of how a simple observation — teachers wasting hours on WhatsApp — led me to build a full coaching management platform used by 500+ centers across India.</p>
+        <h3 class="blog-title">How I Built Educare: From a Pain Point to a 500+ User Platform</h3>
+        <p class="blog-excerpt">The story of how teachers wasting hours on WhatsApp led me to build a full coaching management platform now used by 500+ centers across India.</p>
       </div>
-      <div class="blog-share"><span class="share-badge prof">📌 Rekha Sharma</span><span class="share-badge prof">📌 Nidhi Agrawal</span><span class="share-badge prof">📌 7 others</span></div>
-      <div class="blog-meta"><span class="blog-author">Devesh Tripathi · 15 min read</span><span class="blog-read">Read More →</span></div>
+      <div class="blog-share"><span class="share-badge">📌 Rekha Sharma</span><span class="share-badge">📌 Nidhi Agrawal</span><span class="share-badge">📌 7 others</span></div>
+      <div class="blog-meta"><span class="blog-author">Devesh Tripathi · 15 min</span><span class="blog-read">Read →</span></div>
     </div>
   </div>
 </section>
@@ -421,11 +475,10 @@
 <!-- ABOUT -->
 <section id="about">
   <div class="about-text">
-    <div class="section-label">// 06 — Me</div>
+    <div class="section-label">// 08 — Me</div>
     <h2 class="section-title" style="margin-bottom:28px">About Me</h2>
-    <p>Hey! I'm Devesh — a backend-focused software engineer passionate about building intelligent systems that solve real problems. I work primarily with Python, Django, and Machine Learning.</p>
-    <p>I've shipped real products — from AI-powered tools to full coaching management platforms used by 500+ centers. I believe the best code is the one that makes someone's life genuinely easier.</p>
-    <p>When I'm not coding, I'm writing about what I've learned — and apparently professors are sharing it. That's the ultimate compliment.</p>
+    <p>Hey! I'm Devesh — a backend-focused software engineer passionate about building intelligent systems that solve real problems. Python, Django, and ML are my primary tools.</p>
+    <p>I've shipped real products — from AI tools to coaching platforms used by 500+ centers. I believe the best code makes someone's life genuinely easier.</p>
     <p class="about-accent">&gt; Always building. Always learning.</p>
   </div>
   <div class="about-stats">
@@ -444,15 +497,13 @@
     <span class="gold">Digital Banao.</span>
     <span class="white small">Ek Complete Portal — Sab Kuch Ek Jagah.</span>
   </h2>
-  <p class="edu-sub">Maine khud banaya hai — <strong>Educare</strong> — ek fully functional coaching management system. Ab aap isse apni coaching ke liye khareed sakte hain aur ek <strong>professional online presence</strong> bana sakte hain.</p>
-
+  <p class="edu-sub">Maine khud banaya hai — <strong>Educare</strong> — ek fully functional coaching management system. Ab aap isse khareed sakte hain aur ek <strong>professional online presence</strong> bana sakte hain.</p>
   <div class="edu-demo-wrap reveal">
     <a href="https://edu-v2-lilac.vercel.app/" target="_blank" rel="noopener" class="edu-demo-btn">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
       Live Demo Dekho — Pehle Try Karo, Phir Kharido
     </a>
   </div>
-
   <div class="edu-pain reveal">
     <div class="edu-pain-title">🤔 Kya Aap Bhi Yahi Face Kar Rahe Hain?</div>
     <ul class="pain-grid">
@@ -466,31 +517,27 @@
       <li class="pain-item"><span class="good">✓</span><strong style="color:var(--green)">Sirf ek baar pay karo — 10 saal tak tension-free.</strong></li>
     </ul>
   </div>
-
   <div class="edu-features">
     <div class="edu-feat reveal"><div class="edu-feat-icon">🖥️</div><div class="edu-feat-title">Professional Website</div><div class="edu-feat-desc">Coaching ka apna website — courses, fees, contact sab dikhaye.</div></div>
     <div class="edu-feat reveal" style="transition-delay:.05s"><div class="edu-feat-icon">👨‍🎓</div><div class="edu-feat-title">Student Management</div><div class="edu-feat-desc">Enrollment, fees records, batch assignment — sab ek dashboard se.</div></div>
-    <div class="edu-feat reveal" style="transition-delay:.1s"><div class="edu-feat-icon">📚</div><div class="edu-feat-title">Study Material Upload</div><div class="edu-feat-desc">Notes, PDFs, videos portal pe. Students login karke download karein.</div></div>
+    <div class="edu-feat reveal" style="transition-delay:.1s"><div class="edu-feat-icon">📚</div><div class="edu-feat-title">Study Material</div><div class="edu-feat-desc">Notes, PDFs, videos portal pe. Students login karke download karein.</div></div>
     <div class="edu-feat reveal" style="transition-delay:.15s"><div class="edu-feat-icon">📊</div><div class="edu-feat-title">Attendance &amp; Progress</div><div class="edu-feat-desc">Daily attendance, test marks, progress reports — parents bhi dekh sakein.</div></div>
-    <div class="edu-feat reveal" style="transition-delay:.2s"><div class="edu-feat-icon">💳</div><div class="edu-feat-title">Fees Management</div><div class="edu-feat-desc">Pending fees alerts, payment records, auto reminders — manual kaam khatam.</div></div>
-    <div class="edu-feat reveal" style="transition-delay:.25s"><div class="edu-feat-icon">📱</div><div class="edu-feat-title">Mobile Friendly</div><div class="edu-feat-desc">Phone pe perfectly kaam karta hai. Teachers aur students dono ke liye easy.</div></div>
-    <div class="edu-feat reveal" style="transition-delay:.3s"><div class="edu-feat-icon">🔒</div><div class="edu-feat-title">Secure Login System</div><div class="edu-feat-desc">Admin, teacher, student — alag roles aur permissions ke saath fully secure.</div></div>
-    <div class="edu-feat reveal" style="transition-delay:.35s"><div class="edu-feat-icon">🎨</div><div class="edu-feat-title">Custom Branding</div><div class="edu-feat-desc">Aapki coaching ka naam, logo, colors — portal bilkul aapki identity le lega.</div></div>
+    <div class="edu-feat reveal" style="transition-delay:.2s"><div class="edu-feat-icon">💳</div><div class="edu-feat-title">Fees Management</div><div class="edu-feat-desc">Pending fees alerts, payment records, auto reminders.</div></div>
+    <div class="edu-feat reveal" style="transition-delay:.25s"><div class="edu-feat-icon">📱</div><div class="edu-feat-title">Mobile Friendly</div><div class="edu-feat-desc">Phone pe perfectly kaam karta hai. Teachers aur students dono ke liye.</div></div>
+    <div class="edu-feat reveal" style="transition-delay:.3s"><div class="edu-feat-icon">🔒</div><div class="edu-feat-title">Secure Login</div><div class="edu-feat-desc">Admin, teacher, student — alag roles aur permissions.</div></div>
+    <div class="edu-feat reveal" style="transition-delay:.35s"><div class="edu-feat-icon">🎨</div><div class="edu-feat-title">Custom Branding</div><div class="edu-feat-desc">Aapki coaching ka naam, logo, colors — portal bilkul aapki identity.</div></div>
   </div>
-
   <div class="edu-proof reveal">
-    <div class="proof-card"><div class="proof-num">500+</div><div class="proof-label">Coaching Centers Sold</div></div>
+    <div class="proof-card"><div class="proof-num">500+</div><div class="proof-label">Centers Sold</div></div>
     <div class="proof-card"><div class="proof-num">₹0</div><div class="proof-label">Hidden Charges</div></div>
     <div class="proof-card"><div class="proof-num">5 Yr</div><div class="proof-label">Free Maintenance</div></div>
     <div class="proof-card"><div class="proof-num">24h</div><div class="proof-label">Setup Time</div></div>
   </div>
-
   <div class="urgency-strip reveal">
     <div class="urgency-icon">🔥</div>
     <div class="urgency-text"><strong>Sirf 3 Slots Bache Hain!</strong> Is mahine sirf <strong>5 coaching centers</strong> ko personally onboard kar raha hoon. Slot full hone se pehle WhatsApp karo!</div>
     <div class="slots-pill" id="edu-slots">⚡ 3 Slots Remaining</div>
   </div>
-
   <div class="countdown-wrap reveal">
     <div class="countdown-label">🕐 Special Launch Price Khatam Hone Mein</div>
     <div class="cd-boxes">
@@ -500,66 +547,62 @@
       <div class="cd-box"><div class="cd-num" id="cd-s">00</div><div class="cd-unit">Secs</div></div>
     </div>
   </div>
-
   <div class="pricing-row">
     <div class="price-card reveal">
       <div class="plan-label">// Annual Plan</div>
       <div class="price-amount"><span class="cur">₹</span>10,000</div>
-      <div class="price-term">per year &nbsp;·&nbsp; renew karein ya upgrade karein</div>
+      <div class="price-term">per year · renew karein ya upgrade karein</div>
       <div class="price-divider"></div>
       <ul class="price-features">
         <li><span class="tick">✓</span> Full Educare Portal Access</li>
         <li><span class="tick">✓</span> Student &amp; Batch Management</li>
         <li><span class="tick">✓</span> Study Material Upload</li>
         <li><span class="tick">✓</span> Fees Tracking System</li>
-        <li><span class="tick">✓</span> Mobile Responsive Design</li>
+        <li><span class="tick">✓</span> Mobile Responsive</li>
         <li><span class="tick">✓</span> Custom Coaching Branding</li>
         <li><span class="tick">✓</span> 1 Year Technical Support</li>
-        <li><span class="tick">✓</span> Domain Setup Available (extra)</li>
+        <li><span class="tick">✓</span> Domain Setup (extra)</li>
       </ul>
-      <a class="buy-btn outline" href="https://wa.me/917080552397?text=Hii%20Devesh%2C%20mujhe%20Educare%20ka%20ANNUAL%20PLAN%20(%E2%82%B910%2C000%2Fyear)%20lena%20hai." target="_blank" rel="noopener">
+      <a class="buy-btn outline" href="https://wa.me/917080552397?text=Hii%20Devesh%2C%20mujhe%20Educare%20ka%20ANNUAL%20PLAN%20lena%20hai." target="_blank" rel="noopener">
         <svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
         WhatsApp — ₹10,000/yr
       </a>
     </div>
-
     <div class="price-card best reveal" style="transition-delay:.1s">
-      <div class="best-badge">🏆 BEST DEAL — MOST POPULAR</div>
+      <div class="best-badge">🏆 BEST DEAL</div>
       <div class="plan-label">// 10 Saal Ka Plan</div>
       <div class="price-amount"><span class="cur">₹</span>25,000</div>
-      <div class="price-term">sirf ek baar &nbsp;·&nbsp; 10 saal tak tension-free</div>
+      <div class="price-term">sirf ek baar · 10 saal tak tension-free</div>
       <div class="price-divider"></div>
       <ul class="price-features">
         <li><span class="tick-gold">★</span> Full Educare Portal — 10 Saal</li>
-        <li><span class="tick-gold">★</span> 5 Saal FREE Maintenance Included</li>
+        <li><span class="tick-gold">★</span> 5 Saal FREE Maintenance</li>
         <li><span class="tick-gold">★</span> Student, Batch &amp; Fees Management</li>
-        <li><span class="tick-gold">★</span> Study Material + Assignment Upload</li>
+        <li><span class="tick-gold">★</span> Study Material + Assignments</li>
         <li><span class="tick-gold">★</span> Parent Portal &amp; Progress Reports</li>
         <li><span class="tick-gold">★</span> Complete Custom Branding</li>
-        <li><span class="tick-gold">★</span> Mobile + Desktop Perfect</li>
-        <li><span class="tick-gold">★</span> Priority Support — Direct WhatsApp</li>
+        <li><span class="tick-gold">★</span> Priority WhatsApp Support</li>
         <li><span class="tick-gold">★</span> Future Updates FREE</li>
-        <li><span class="tick-gold">★</span> Domain Setup Available (extra)</li>
+        <li><span class="tick-gold">★</span> Domain Setup (extra)</li>
       </ul>
-      <a class="buy-btn solid" href="https://wa.me/917080552397?text=Hii%20Devesh%2C%20mujhe%20Educare%20ka%2010%20SAAL%20WALA%20PLAN%20(%E2%82%B925%2C000%20%2B%205%20Yr%20Free%20Maintenance)%20lena%20hai." target="_blank" rel="noopener">
+      <a class="buy-btn solid" href="https://wa.me/917080552397?text=Hii%20Devesh%2C%20mujhe%20Educare%20ka%2010%20SAAL%20WALA%20PLAN%20lena%20hai." target="_blank" rel="noopener">
         <svg class="wa-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
         🔥 Buy Now — ₹25,000 / 10 Saal!
       </a>
     </div>
   </div>
-
   <div class="domain-note reveal">
     <div class="domain-note-icon">🌐</div>
-    <div class="domain-note-text"><strong>Domain Chahiye?</strong> Apna domain (jaise <em>yourcoaching.com</em>) chahiye toh hum setup kar denge — thoda extra charge lagega. <strong>Domain price dono plans mein include nahi hai.</strong></div>
+    <div class="domain-note-text"><strong>Domain Chahiye?</strong> Apna domain (jaise <em>yourcoaching.com</em>) chahiye toh setup kar denge — thoda extra charge. <strong>Domain dono plans mein include nahi hai.</strong></div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
   <div class="contact-inner reveal">
-    <div class="section-label" style="text-align:center">// 07 — Let's Talk</div>
+    <div class="section-label" style="text-align:center">// 09 — Let's Talk</div>
     <h2 class="section-title">Build Something Together</h2>
-    <p class="contact-desc">Have a project in mind? Looking for a backend developer or AI engineer? Let's connect and create something meaningful.</p>
+    <p class="contact-desc">Have a project in mind? Looking for a developer or AI engineer? Let's connect and create something meaningful.</p>
     <a href="mailto:deveshtripathii930@gmail.com" class="contact-btn">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       Get In Touch
@@ -567,13 +610,12 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-logo">DT</div>
   <div class="footer-links">
-    <a href="https://github.com/deveshtripathiii" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/devesh-tripathi-176859203" target="_blank">LinkedIn</a>
-    <a href="https://wa.me/917080552397" target="_blank">WhatsApp</a>
+    <a href="https://github.com/deveshtripathiii" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/devesh-tripathi-176859203" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://wa.me/917080552397" target="_blank" rel="noopener">WhatsApp</a>
   </div>
   <div class="footer-copy">© 2026 Devesh Tripathi</div>
 </footer>

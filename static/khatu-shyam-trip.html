@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shree Khatu Shyam Ji – One Day Trip | Greater Noida</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Poppins:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --saffron:#E8650A;--gold:#C8860A;--deep-maroon:#6B0F1A;
+  --cream:#FFF8EE;--light-gold:#FDE8A0;--warm-white:#FFFBF3;
+  --text-dark:#2C1A0E;--text-mid:#5C3A1E;
+}
+body{background:var(--cream);color:var(--text-dark);font-family:'Poppins',sans-serif;overflow-x:hidden}
+.border-pattern{background:repeating-linear-gradient(90deg,var(--saffron) 0,var(--saffron) 8px,var(--gold) 8px,var(--gold) 16px,var(--deep-maroon) 16px,var(--deep-maroon) 24px);height:6px}
+
+/* HERO */
+.hero{background:linear-gradient(160deg,#6B0F1A 0%,#3D0707 40%,#1A0000 100%);position:relative;overflow:hidden;padding:0 0 60px}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23C8860A' fill-opacity='0.08'%3E%3Cpath d='M30 0L37.5 22.5L60 30L37.5 37.5L30 60L22.5 37.5L0 30L22.5 22.5z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");opacity:.5}
+.hero-inner{position:relative;z-index:1;text-align:center;padding:40px 20px 0}
+.om-symbol{font-size:52px;color:var(--gold);text-shadow:0 0 30px rgba(200,134,10,.6);display:block;margin-bottom:4px;font-family:'Noto Serif Devanagari',serif}
+.jay-shyam{font-family:'Noto Serif Devanagari',serif;font-size:18px;color:var(--light-gold);letter-spacing:4px;margin-bottom:20px;opacity:.9}
+.hero h1{font-family:'Cinzel Decorative',serif;font-size:clamp(26px,5vw,48px);color:#fff;line-height:1.2;margin-bottom:6px;text-shadow:2px 2px 0 rgba(0,0,0,.5)}
+.hero h1 span{color:var(--light-gold)}
+.hero-subtitle{font-size:13px;color:rgba(255,255,255,.7);letter-spacing:3px;text-transform:uppercase;margin-bottom:30px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--saffron);color:#fff;padding:10px 28px;border-radius:50px;font-weight:600;font-size:15px;box-shadow:0 4px 20px rgba(232,101,10,.5);margin-bottom:30px}
+.hero-cards{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;padding:0 16px;max-width:850px;margin:0 auto}
+.hero-card{background:rgba(255,255,255,.08);border:1px solid rgba(200,134,10,.3);border-radius:12px;padding:14px 20px;text-align:center;min-width:130px;backdrop-filter:blur(4px)}
+.hero-card .hc-label{font-size:10px;color:rgba(253,232,160,.7);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
+.hero-card .hc-value{font-size:14px;font-weight:600;color:#fff}
+.hero-card .hc-value span{color:var(--light-gold)}
+.hero-card.price-card{background:linear-gradient(135deg,rgba(232,101,10,.25),rgba(107,15,26,.4));border:1.5px solid var(--saffron);box-shadow:0 0 15px rgba(232,101,10,.3)}
+.divider-lotus{text-align:center;margin:30px 0 0;font-size:28px;color:var(--gold);position:relative;z-index:1}
+
+/* SEAT TRACKER */
+.live-tracker-box{max-width:700px;margin:-25px auto 20px;padding:16px 20px;background:#fff;border-radius:14px;box-shadow:0 8px 24px rgba(107,15,26,.12);text-align:center;position:relative;z-index:10;border:1.5px solid var(--gold)}
+.tracker-status{font-weight:600;font-size:15px;margin-bottom:8px;color:var(--deep-maroon);display:flex;justify-content:center;align-items:center;gap:6px}
+.progress-container{background:#e0e0e0;border-radius:10px;height:12px;width:100%;overflow:hidden}
+.progress-bar{background:linear-gradient(90deg,var(--gold),var(--saffron));height:100%;width:0%;transition:width 1.5s ease-in-out}
+.tracker-note{font-size:12px;color:var(--text-mid);margin-top:6px;font-weight:500}
+
+/* AD BANNER */
+.ad-wrap{max-width:900px;margin:0 auto;padding:0 20px 28px}
+.ad-banner-card{background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:14px;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;position:relative;overflow:hidden}
+.ad-banner-card::before{content:'';position:absolute;top:-30px;right:-30px;width:100px;height:100px;background:rgba(200,134,10,.08);border-radius:50%}
+.ad-label{font-size:9px;color:rgba(255,255,255,.35);letter-spacing:2px;text-transform:uppercase;margin-bottom:3px}
+.ad-title{color:#fff;font-size:14px;font-weight:600}
+.ad-sub{color:rgba(255,255,255,.55);font-size:11px;margin-top:2px}
+.ad-cta{background:var(--saffron);color:#fff;padding:9px 18px;border-radius:8px;font-size:12px;font-weight:600;text-decoration:none;white-space:nowrap;flex-shrink:0}
+.ad-cta:hover{opacity:.9}
+
+/* SECTION */
+.section{padding:48px 20px;max-width:900px;margin:0 auto}
+.section-title{font-family:'Cinzel Decorative',serif;font-size:20px;color:var(--deep-maroon);text-align:center;margin-bottom:8px}
+.section-sub{text-align:center;color:var(--text-mid);font-size:13px;margin-bottom:36px;letter-spacing:1px}
+.gold-rule{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 auto 36px;max-width:300px}
+.gold-rule::before,.gold-rule::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.gold-rule-icon{color:var(--gold);font-size:18px}
+
+/* ITINERARY */
+.itinerary{position:relative;padding-left:20px}
+.itinerary::before{content:'';position:absolute;left:28px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--saffron),var(--gold),var(--saffron))}
+.it-item{display:flex;gap:20px;margin-bottom:24px;position:relative;align-items:flex-start}
+.it-dot{width:36px;height:36px;border-radius:50%;background:var(--deep-maroon);border:3px solid var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;font-size:15px}
+.it-body{background:#fff;border:1px solid rgba(200,134,10,.2);border-radius:12px;padding:12px 16px;flex:1;box-shadow:0 2px 8px rgba(107,15,26,.06)}
+.it-time{font-size:11px;color:var(--saffron);font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px}
+.it-desc{font-size:14px;font-weight:500;color:var(--text-dark)}
+.it-note{font-size:12px;color:var(--text-mid);margin-top:3px}
+.it-highlight{background:linear-gradient(135deg,#FFF0E0,#FFE8C8);border-color:var(--saffron)!important}
+
+/* INCLUSIONS */
+.inc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+.inc-card{background:#fff;border:1px solid rgba(200,134,10,.2);border-radius:14px;padding:18px 16px;text-align:center;box-shadow:0 2px 10px rgba(107,15,26,.06);transition:transform .2s,border-color .2s}
+.inc-card:hover{transform:translateY(-3px);border-color:var(--saffron)}
+.inc-icon{font-size:28px;margin-bottom:10px;display:block}
+.inc-title{font-size:13px;font-weight:600;color:var(--deep-maroon);margin-bottom:4px}
+.inc-desc{font-size:11px;color:var(--text-mid)}
+
+/* INSURANCE */
+.insurance-banner{background:linear-gradient(135deg,#FFF0D6,#FFE4B0);border:2px solid var(--gold);border-radius:16px;padding:24px;display:flex;gap:16px;align-items:flex-start}
+.ins-icon{font-size:36px;flex-shrink:0}
+.ins-content h3{font-size:15px;font-weight:600;color:var(--deep-maroon);margin-bottom:6px}
+.ins-content p{font-size:13px;color:var(--text-mid);line-height:1.7}
+
+/* PAYMENT */
+.payment-section-box{background:#fff;border:2px dashed var(--gold);border-radius:14px;padding:20px;margin-top:24px;text-align:center}
+.payment-title{font-size:15px;font-weight:600;color:var(--deep-maroon);margin-bottom:10px;display:flex;align-items:center;justify-content:center;gap:6px}
+.payment-details-row{background:var(--warm-white);padding:10px;border-radius:8px;font-size:13px;color:var(--text-dark);margin-bottom:12px;border:1px solid rgba(200,134,10,.15);text-align:left}
+.upi-pay-btn{display:flex;align-items:center;justify-content:center;gap:8px;background:#1976D2;color:#fff;padding:13px 24px;border-radius:8px;font-weight:600;font-size:14px;text-decoration:none;margin-top:5px;box-shadow:0 4px 12px rgba(25,118,210,.3)}
+
+/* CONTACT */
+.contact-strip{background:var(--deep-maroon);color:#fff;padding:24px 20px;text-align:center}
+.contact-strip h3{font-family:'Cinzel Decorative',serif;font-size:16px;color:var(--light-gold);margin-bottom:16px}
+.contact-btns{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+.contact-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:50px;font-size:14px;font-weight:500;text-decoration:none;transition:transform .2s}
+.contact-btn:hover{transform:translateY(-2px)}
+.btn-call{background:var(--saffron);color:#fff}
+.btn-email{background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3)}
+.btn-wa{background:#25D366;color:#fff}
+
+/* FORM */
+.form-wrap{background:var(--warm-white);border-top:4px solid var(--saffron);padding:48px 20px}
+.form-inner{max-width:680px;margin:0 auto}
+.form-header{text-align:center;margin-bottom:36px}
+.form-header h2{font-family:'Cinzel Decorative',serif;font-size:22px;color:var(--deep-maroon);margin-bottom:8px}
+.form-header p{font-size:13px;color:var(--text-mid)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:600px){.form-grid{grid-template-columns:1fr}}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group.full{grid-column:1/-1}
+.form-group label{font-size:12px;font-weight:600;color:var(--deep-maroon);letter-spacing:.5px;text-transform:uppercase}
+.form-group input,.form-group select,.form-group textarea{padding:12px 16px;border:1.5px solid rgba(200,134,10,.25);border-radius:10px;font-size:14px;font-family:'Poppins',sans-serif;color:var(--text-dark);background:#fff;outline:none;transition:border .2s,box-shadow .2s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--saffron);box-shadow:0 0 0 3px rgba(232,101,10,.12)}
+.form-group textarea{resize:vertical;min-height:80px}
+.required{color:var(--saffron)}
+.submit-btn{width:100%;padding:16px;background:linear-gradient(135deg,var(--saffron),#C8520A);color:#fff;border:none;border-radius:12px;font-size:16px;font-weight:600;font-family:'Poppins',sans-serif;cursor:pointer;margin-top:28px;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 4px 20px rgba(232,101,10,.4);transition:transform .2s}
+.submit-btn:hover{transform:translateY(-2px)}
+.submit-btn:active{transform:scale(.98)}
+.wa-note{text-align:center;margin-top:14px;font-size:12px;color:var(--text-mid)}
+.wa-note strong{color:#25D366}
+
+footer{background:var(--text-dark);color:rgba(255,255,255,.5);text-align:center;padding:20px;font-size:12px}
+footer strong{color:var(--light-gold)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.float{animation:float 3s ease-in-out infinite}
+@media(max-width:480px){.hero h1{font-size:24px}.insurance-banner{flex-direction:column}}
+</style>
+</head>
+<body>
+
+<div class="border-pattern"></div>
+
+<!-- ======= HERO ======= -->
+<div class="hero">
+  <div class="hero-inner">
+    <span class="om-symbol float">🕉</span>
+    <div class="jay-shyam">जय श्री श्याम</div>
+    <h1>Shree <span>Khatu Shyam Ji</span></h1>
+    <h1 style="font-size:clamp(16px,3vw,26px);color:var(--light-gold);font-family:'Noto Serif Devanagari',serif">एक दिवसीय तीर्थ यात्रा</h1>
+    <p class="hero-subtitle">Greater Noida → Rajasthan</p>
+    <div class="hero-badge">🚌 &nbsp;One Day Yatra &nbsp;• &nbsp;AC Bus &nbsp;• &nbsp;Fully Insured</div>
+    <div class="hero-cards">
+      <div class="hero-card price-card">
+        <div class="hc-label" style="color:#fff">💰 Special Price</div>
+        <div class="hc-value" style="font-size:18px;color:var(--light-gold)">₹999/- <br><span style="font-size:10px;color:#fff;font-weight:400">All Inclusive</span></div>
+      </div>
+      <div class="hero-card">
+        <div class="hc-label">📅 Trip Date</div>
+        <div class="hc-value"><span>27 June 2026</span><br><span style="font-size:11px;color:rgba(255,255,255,.6)">Saturday</span></div>
+      </div>
+      <div class="hero-card">
+        <div class="hc-label">🚏 Total Seats</div>
+        <div class="hc-value"><span>45 Seats Only</span><br><span style="font-size:11px;color:#4CAF50;font-weight:600">All Available!</span></div>
+      </div>
+      <div class="hero-card">
+        <div class="hc-label">⏰ Departure</div>
+        <div class="hc-value"><span>4:00 AM</span><br><span style="font-size:11px;color:rgba(255,255,255,.6)">Pari Chowk</span></div>
+      </div>
+      <div class="hero-card">
+        <div class="hc-label">🏠 Return</div>
+        <div class="hc-value"><span>~10:00 PM</span><br><span style="font-size:11px;color:rgba(255,255,255,.6)">Same Night</span></div>
+      </div>
+    </div>
+    <div class="divider-lotus">🪷 🙏 🪷</div>
+  </div>
+</div>
+
+<!-- SEAT TRACKER (all vacant) -->
+<div class="live-tracker-box">
+  <div class="tracker-status">
+    ✅ Sabhi <span id="seats-left-counter" style="color:var(--saffron);font-weight:700;margin:0 3px">45</span> Seats Abhi Available Hain!
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar" id="live-progress" style="width:0%"></div>
+  </div>
+  <div class="tracker-note">
+    🎉 Registration abhi khuli hai — Apni seat aaj hi confirm karein! Seats limited hain.
+  </div>
+</div>
+
+<div class="border-pattern"></div>
+
+<!-- ======= AD UNIT 1 ======= -->
+<!-- ADSENSE: Replace this div with your AdSense <ins> tag once approved -->
+<div class="ad-wrap" style="padding-top:28px">
+  <div class="ad-banner-card">
+    <div>
+      <div class="ad-label">Advertisement</div>
+      <div class="ad-title">🏨 Dharamshala near Khatu Shyam Ji</div>
+      <div class="ad-sub">Starting ₹299/night &nbsp;• &nbsp;500m from Main Temple Gate</div>
+    </div>
+    <a href="https://www.makemytrip.com/hotels/khatu-hotels.html" target="_blank" class="ad-cta">Book Now →</a>
+  </div>
+</div>
+
+<!-- ======= ITINERARY ======= -->
+<div class="section">
+  <p class="section-title">यात्रा का कार्यक्रम</p>
+  <p class="section-sub">FULL DAY ITINERARY — 27 JUNE 2026</p>
+  <div class="gold-rule"><span class="gold-rule-icon">✦</span></div>
+  <div class="itinerary">
+    <div class="it-item">
+      <div class="it-dot">🌙</div>
+      <div class="it-body it-highlight">
+        <div class="it-time">3:30 AM — Assemble</div>
+        <div class="it-desc">Pari Chowk, Greater Noida — Boarding Starts</div>
+        <div class="it-note">Sabhi passengers 3:30 AM tak pahunch jayein</div>
+      </div>
+    </div>
+    <div class="it-item">
+      <div class="it-dot">🚌</div>
+      <div class="it-body it-highlight">
+        <div class="it-time">4:00 AM — Departure</div>
+        <div class="it-desc">AC Bus Greater Noida se Khatu Shyam Ji ke liye rawan</div>
+        <div class="it-note">Journey starts — Bhajans &amp; music on board 🎵</div>
+      </div>
+    </div>
+    <div class="it-item">
+      <div class="it-dot">☕</div>
+      <div class="it-body">
+        <div class="it-time">7:00 AM — Chai &amp; Snacks Break (Jate Samay)</div>
+        <div class="it-desc">Highway pe ruk ke chai, nashta &amp; fresh-up break</div>
+        <div class="it-note">Complimentary snacks &amp; chai included 🍪☕</div>
+      </div>
+    </div>
+    <div class="it-item">
+      <div class="it-dot">🛕</div>
+      <div class="it-body it-highlight">
+        <div class="it-time">10:00 AM — Khatu Shyam Ji Arrival</div>
+        <div class="it-desc">Shree Khatu Shyam Ji Mandir — Darshan &amp; Aarti</div>
+        <div class="it-note">Shringar Aarti darshan — Baba ke charno mein 🙏</div>
+      </div>
+    </div>
+    <div class="it-item">
+      <div class="it-dot">🪔</div>
+      <div class="it-body">
+        <div class="it-time">10:00 AM – 2:00 PM — Darshan Time</div>
+        <div class="it-desc">Temple darshan, pooja, prasad, local bazaar visit</div>
+        <div class="it-note">Khatu town explore karne ka bhi time milega</div>
+      </div>
+    </div>
+    <div class="it-item">
+      <div class="it-dot">🍽</div>
+      <div class="it-body">
+        <div class="it-time">2:00 PM — Lunch Break</div>
+        <div class="it-desc">Local dhaba mein lunch (own expense)</div>
+        <div class="it-note">Pure veg Rajasthani khana available nearby</div>
+      </div>
+    </div>
+    <div class="it-item">
+      <div class="it-dot">🔙</div>
+      <div class="it-body it-highlight">
+        <div class="it-time">3:00 PM — Return Journey Starts</div>
+        <div class="it-desc">Khatu Shyam Ji se Greater Noida ke liye wapsi</div>
+        <div class="it-note">Baba ka aashirwad lekar ghar ki taraf 🙏</div>
+      </div>
+    </div>
+    <div class="it-item">
+      <div class="it-dot">☕</div>
+      <div class="it-body">
+        <div class="it-time">6:30 PM — Chai &amp; Snacks Break (Aate Samay)</div>
+        <div class="it-desc">Highway pe wapsi mein chai &amp; snacks stop</div>
+        <div class="it-note">Complimentary snacks &amp; chai included 🍪☕</div>
+      </div>
+    </div>
+    <div class="it-item">
+      <div class="it-dot">🏠</div>
+      <div class="it-body">
+        <div class="it-time">~10:00 PM — Back at Pari Chowk</div>
+        <div class="it-desc">Ghar wapsi — Baba ki jai ho! 🙏</div>
+        <div class="it-note">Drop-off at Pari Chowk, Greater Noida</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="border-pattern"></div>
+
+<!-- ======= INCLUSIONS ======= -->
+<div class="section">
+  <p class="section-title">Package Mein Kya Milega</p>
+  <p class="section-sub">WHAT'S INCLUDED IN ₹999</p>
+  <div class="gold-rule"><span class="gold-rule-icon">✦</span></div>
+  <div class="inc-grid">
+    <div class="inc-card">
+      <span class="inc-icon">🚌</span>
+      <div class="inc-title">AC Bus Transport</div>
+      <div class="inc-desc">Comfortable push-back AC bus – Round trip from Pari Chowk</div>
+    </div>
+    <div class="inc-card">
+      <span class="inc-icon">☕</span>
+      <div class="inc-title">Chai × 2</div>
+      <div class="inc-desc">Chai stop going AND returning — stay refreshed</div>
+    </div>
+    <div class="inc-card">
+      <span class="inc-icon">🍪</span>
+      <div class="inc-title">Snacks × 2</div>
+      <div class="inc-desc">Packed nashta on both sides of journey</div>
+    </div>
+    <div class="inc-card">
+      <span class="inc-icon">🎙</span>
+      <div class="inc-title">Tour Coordinator</div>
+      <div class="inc-desc">Expert assistance for smooth darshan & navigation</div>
+    </div>
+    <div class="inc-card" style="border:1.5px solid var(--gold);background:#FFFDEB">
+      <span class="inc-icon">🛡️</span>
+      <div class="inc-title" style="color:var(--deep-maroon)">100% Insured Trip</div>
+      <div class="inc-desc" style="font-weight:500">Accidental travel insurance included for all</div>
+    </div>
+    <div class="inc-card">
+      <span class="inc-icon">🎵</span>
+      <div class="inc-title">Bhajan Music</div>
+      <div class="inc-desc">Shyam bhajans, kirtan & positive vibes throughout</div>
+    </div>
+  </div>
+</div>
+
+<!-- ======= AD UNIT 2 ======= -->
+<!-- ADSENSE: Replace this div with your AdSense <ins> tag once approved -->
+<div class="ad-wrap">
+  <div class="ad-banner-card" style="background:linear-gradient(135deg,#0d4f2e,#0a3d22)">
+    <div>
+      <div class="ad-label">Advertisement</div>
+      <div class="ad-title">🎒 Travel Essentials — Bags, Pillows & More</div>
+      <div class="ad-sub">Best travel gear for pilgrimage trips • Free delivery above ₹499</div>
+    </div>
+    <a href="https://www.amazon.in/s?k=travel+bag+pilgrimage" target="_blank" class="ad-cta" style="background:#FF9900;color:#111">Shop Now →</a>
+  </div>
+</div>
+
+<!-- INSURANCE -->
+<div style="padding:0 20px 40px;max-width:900px;margin:0 auto">
+  <div class="insurance-banner">
+    <div class="ins-icon">🛡️</div>
+    <div class="ins-content">
+      <h3>Passenger Safety &amp; Trip Insurance Included</h3>
+      <p>Aapki suraksha hamari sabse badi priority hai. Is yatra mein sabhi registered passengers ke liye <strong>Accidental Travel & Life Insurance Cover</strong> ₹999 ke ticket ke andar hi completely include hai. Safe aur behtareen travel experience ke liye sabhi passengers ki insurance profiling yatra shuru hone se pehle active kar di jayegi. Baba Shyam ka aashirwad aur poora protection aapke sath hai. 🙏</p>
+    </div>
+  </div>
+</div>
+
+<div class="border-pattern"></div>
+
+<!-- CONTACT -->
+<div class="contact-strip">
+  <h3>Koi Bhi Sawaal? Humse Sampark Karein</h3>
+  <div class="contact-btns">
+    <a href="tel:7080552397" class="contact-btn btn-call">📞 &nbsp;7080552397</a>
+    <a href="mailto:mmailofdevesh@gmail.com" class="contact-btn btn-email">✉️ &nbsp;mmailofdevesh@gmail.com</a>
+    <a href="https://wa.me/917080552397?text=Namaste%2C%20mujhe%20Khatu%20Shyam%20trip%20ke%20baare%20mein%20jaankari%20chahiye" class="contact-btn btn-wa" target="_blank">💬 &nbsp;WhatsApp</a>
+  </div>
+</div>
+
+<div class="border-pattern"></div>
+
+<!-- ======= FORM ======= -->
+<div class="form-wrap" id="register">
+  <div class="form-inner">
+    <div class="form-header">
+      <div style="font-size:36px;margin-bottom:10px">📝</div>
+      <h2>Registration &amp; Booking</h2>
+      <p>Apna naam darj karein aur seat confirm karein.<br>
+      <strong style="color:var(--saffron)">Trip Date: Saturday, 27 June 2026 | ₹999 per seat</strong></p>
+    </div>
+    <div class="form-grid">
+      <div class="form-group">
+        <label>Poora Naam <span class="required">*</span></label>
+        <input type="text" id="f_name" placeholder="Aapka poora naam" required>
+      </div>
+      <div class="form-group">
+        <label>Mobile Number <span class="required">*</span></label>
+        <input type="tel" id="f_mobile" placeholder="10-digit mobile" maxlength="10" required>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" id="f_email" placeholder="aapka@email.com">
+      </div>
+      <div class="form-group">
+        <label>Umar (Age) <span class="required">*</span></label>
+        <input type="number" id="f_age" placeholder="Aapki umar" min="10" max="40" required>
+      </div>
+      <div class="form-group">
+        <label>Gender <span class="required">*</span></label>
+        <select id="f_gender" required>
+          <option value="">Select karein</option>
+          <option value="Male">Male (Purush)</option>
+          <option value="Female">Female (Mahila)</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>College / University <span class="required">*</span></label>
+        <input type="text" id="f_college" placeholder="Aapke college ka naam" required>
+      </div>
+      <div class="form-group">
+        <label>Kitni Seats Chahiye <span class="required">*</span></label>
+        <select id="f_seats" onchange="updatePayment()" required>
+          <option value="1">1 Seat (₹999)</option>
+          <option value="2">2 Seats (₹1998)</option>
+          <option value="3">3 Seats (₹2997)</option>
+          <option value="4">4 Seats (₹3996)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Pickup Location</label>
+        <select id="f_pickup">
+          <option value="Pari Chowk, Greater Noida">Pari Chowk, Greater Noida</option>
+          <option value="Other (WhatsApp pe batayenge)">Other (WhatsApp pe batayenge)</option>
+        </select>
+      </div>
+      <div class="form-group full">
+        <label>Koi Khaas Zaroorat</label>
+        <textarea id="f_note" placeholder="Jaise: medical condition, friend ka naam, etc."></textarea>
+      </div>
+    </div>
+
+    <div class="payment-section-box">
+      <div class="payment-title">🌐 Step 2: Secure UPI Payment</div>
+      <p style="font-size:12px;color:var(--text-mid);margin-bottom:12px">Niche diye UPI link se payment karein aur seat reserve karein.</p>
+      <div class="payment-details-row">
+        📍 <strong>UPI ID:</strong> <span style="color:var(--deep-maroon);font-weight:600">7080552397-3.wallet@phonepe</span><br>
+        👤 <strong>Name:</strong> Devesh Tripathi<br>
+        💰 <strong>Total Payable:</strong> <span id="payable-amount" style="color:var(--saffron);font-weight:700;font-size:15px">₹999</span>
+      </div>
+      <a href="upi://pay?pa=7080552397-3.wallet@phonepe&pn=Devesh%20Tripathi&am=999&cu=INR&tn=KhatuShyamTrip" class="upi-pay-btn" id="upi-link">
+        📱 Pay via GPay / PhonePe / Paytm
+      </a>
+      <p style="font-size:10px;color:gray;margin-top:4px">*(Smartphone pe click karein)*</p>
+    </div>
+
+    <div id="formError" style="display:none;background:#FFF0F0;border:1px solid #E24B4A;color:#7A1E1E;padding:12px 16px;border-radius:10px;font-size:13px;margin-top:16px"></div>
+
+    <button class="submit-btn" onclick="submitForm()">
+      💬 &nbsp;Payment Screenshot + Details WhatsApp pe Bhejein &nbsp;→
+    </button>
+    <p class="wa-note">Form bhar kar aur payment kar ke <strong>WhatsApp pe payment screenshot zaroor bhejein</strong> — seat tabhi confirm hogi!</p>
+  </div>
+</div>
+
+<footer>
+  <strong>Shree Khatu Shyam Ji Yatra — Greater Noida</strong><br>
+  Guide: 7080552397 &nbsp;|&nbsp; mmailofdevesh@gmail.com<br>
+  <span style="font-size:11px;margin-top:6px;display:block">🕉 Hari Om Tat Sat &nbsp;|&nbsp; Jay Shree Shyam 🙏</span>
+</footer>
+<div class="border-pattern"></div>
+
+<script>
+function updatePayment(){
+  var s=parseInt(document.getElementById('f_seats').value)||1;
+  var amt=s*999;
+  document.getElementById('payable-amount').textContent='₹'+amt;
+  document.getElementById('upi-link').href='upi://pay?pa=7080552397-3.wallet@phonepe&pn=Devesh%20Tripathi&am='+amt+'&cu=INR&tn=KhatuShyamTrip';
+}
+function submitForm(){
+  var name=document.getElementById('f_name').value.trim();
+  var mobile=document.getElementById('f_mobile').value.trim();
+  var email=document.getElementById('f_email').value.trim();
+  var age=document.getElementById('f_age').value.trim();
+  var gender=document.getElementById('f_gender').value;
+  var college=document.getElementById('f_college').value.trim();
+  var seats=document.getElementById('f_seats').value;
+  var pickup=document.getElementById('f_pickup').value;
+  var note=document.getElementById('f_note').value.trim();
+  var err=document.getElementById('formError');
+  var amt=(parseInt(seats)||1)*999;
+  err.style.display='none';
+  if(!name){err.textContent='❌ Poora naam bhar dein.';err.style.display='block';return}
+  if(!mobile||mobile.length!==10||isNaN(mobile)){err.textContent='❌ Sahi 10-digit mobile number daalen.';err.style.display='block';return}
+  if(!age){err.textContent='❌ Apni umar bhar dein.';err.style.display='block';return}
+  if(!gender){err.textContent='❌ Gender select karein.';err.style.display='block';return}
+  if(!college){err.textContent='❌ College ka naam bhar dein.';err.style.display='block';return}
+  var msg='🙏 *JAY SHREE SHYAM JI* 🙏\n\n'
+    +'━━━━━━━━━━━━━━━━━━━━━━\n'
+    +'🚌 *KHATU SHYAM TRIP REGISTRATION*\n'
+    +'📅 Trip Date: Saturday, 27 June 2026\n'
+    +'🛡️ 100% Insured Cover\n'
+    +'━━━━━━━━━━━━━━━━━━━━━━\n\n'
+    +'👤 *Naam:* '+name+'\n'
+    +'📱 *Mobile:* '+mobile+'\n'
+    +(email?'📧 *Email:* '+email+'\n':'')
+    +'🎂 *Umar:* '+age+' saal\n'
+    +'⚥ *Gender:* '+gender+'\n'
+    +'🏫 *College:* '+college+'\n'
+    +'💺 *Seats:* '+seats+' Seat(s)\n'
+    +'📍 *Pickup:* '+pickup+'\n'
+    +'💰 *Amount Paid:* ₹'+amt+' (UPI)\n'
+    +(note?'📝 *Note:* '+note+'\n':'')
+    +'\n━━━━━━━━━━━━━━━━━━━━━━\n'
+    +'📎 _Payment screenshot niche attach kar raha/rahi hun. Seat confirm karein!_ 🙏';
+  window.open('https://wa.me/917080552397?text='+encodeURIComponent(msg),'_blank');
+}
+</script>
+</body>
+</html>

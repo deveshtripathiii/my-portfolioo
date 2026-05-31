@@ -13,6 +13,143 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/educare.css') }}"/>
 </head>
 <body>
+  <!-- =====================================================
+     KHATU SHYAM TOUR CARD — Add karo index.html mein
+     Paste karo navbar ke NEEECHE, hero section se PEHLE
+     ===================================================== -->
+
+<!-- Tour Card Section -->
+<section id="tour-card" style="display:flex;justify-content:center;padding:2.5rem 1rem 1rem;background:transparent;">
+  <div style="
+    width:100%;
+    max-width:380px;
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 32px rgba(90,30,120,0.13), 0 1.5px 6px rgba(0,0,0,0.07);
+    font-family:'Segoe UI',sans-serif;
+  ">
+    <!-- Header -->
+    <div style="
+      background:linear-gradient(135deg,#1a0533 0%,#3b1060 60%,#6d1f8a 100%);
+      padding:1.5rem 1.25rem 1.4rem;
+      text-align:center;
+      position:relative;
+    ">
+      <div style="position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#f5a623,#f7c948,#f5a623);"></div>
+      <div style="font-size:30px;color:#f7c948;margin-bottom:4px;">ॐ</div>
+      <div style="font-size:21px;color:#f7e8ff;font-weight:600;letter-spacing:0.5px;font-family:'Segoe UI',sans-serif;">श्री खाटू श्याम जी</div>
+      <div style="font-size:11px;color:#c9a0f0;letter-spacing:3px;text-transform:uppercase;margin-top:5px;">One Day Yatra · 4 July 2025</div>
+      <!-- Badges -->
+      <div style="display:flex;justify-content:center;gap:8px;margin-top:13px;flex-wrap:wrap;">
+        <span style="background:rgba(247,201,72,0.18);border:0.5px solid #f7c948;color:#f7c948;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;letter-spacing:1px;text-transform:uppercase;">AC Bus</span>
+        <span style="background:rgba(247,201,72,0.18);border:0.5px solid #f7c948;color:#f7c948;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;letter-spacing:1px;text-transform:uppercase;">Insured</span>
+        <span style="background:rgba(255,150,180,0.18);border:0.5px solid #ff96b4;color:#ff96b4;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;letter-spacing:1px;text-transform:uppercase;">Couples 10% Off</span>
+      </div>
+    </div>
+
+    <!-- Body -->
+    <div style="padding:1.25rem 1.25rem 0.75rem;">
+      <!-- Info Grid -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;">
+        <div style="background:#f5f0ff;border-radius:10px;padding:10px 12px;border:0.5px solid #e0d0f5;">
+          <div style="font-size:10px;color:#888;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px;">Ticket Price</div>
+          <div style="font-size:20px;font-weight:700;color:#7c3aed;">₹2,111</div>
+        </div>
+        <div style="background:#f8f8f8;border-radius:10px;padding:10px 12px;border:0.5px solid #eee;">
+          <div style="font-size:10px;color:#888;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px;">Departure</div>
+          <div style="font-size:14px;font-weight:700;color:#222;">4:00 AM</div>
+        </div>
+        <div style="background:#f8f8f8;border-radius:10px;padding:10px 12px;border:0.5px solid #eee;">
+          <div style="font-size:10px;color:#888;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px;">Trip Date</div>
+          <div style="font-size:14px;font-weight:700;color:#222;">4 Jul, Friday</div>
+        </div>
+        <div style="background:#f8f8f8;border-radius:10px;padding:10px 12px;border:0.5px solid #eee;">
+          <div style="font-size:10px;color:#888;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px;">Return</div>
+          <div style="font-size:14px;font-weight:700;color:#222;">~10:00 PM</div>
+        </div>
+      </div>
+
+      <!-- Couple Offer -->
+      <div style="
+        background:linear-gradient(135deg,rgba(255,100,150,0.07),rgba(255,150,180,0.04));
+        border:0.5px solid #ff96b4;
+        border-radius:10px;
+        padding:12px 14px;
+        margin-bottom:14px;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:10px;
+      ">
+        <div>
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#d63f6e;margin-bottom:3px;">Couple Special Offer</div>
+          <div style="display:flex;align-items:baseline;gap:8px;">
+            <span style="font-size:13px;color:#999;text-decoration:line-through;">₹4,222</span>
+            <span style="font-size:20px;font-weight:700;color:#d63f6e;">₹3,800</span>
+          </div>
+          <div style="font-size:11px;color:#888;">for 2 people · save ₹422</div>
+        </div>
+        <div style="background:#d63f6e;color:#fff;font-size:12px;font-weight:700;padding:7px 14px;border-radius:20px;white-space:nowrap;">10% OFF</div>
+      </div>
+
+      <!-- Seats Bar -->
+      <div style="margin-bottom:14px;">
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:#666;margin-bottom:5px;">
+          <span>Seats Booked</span>
+          <span>0 / 45</span>
+        </div>
+        <div style="height:7px;background:#f0eaff;border-radius:10px;overflow:hidden;">
+          <div style="height:100%;width:0%;background:linear-gradient(90deg,#7c3aed,#a855f7);border-radius:10px;"></div>
+        </div>
+        <div style="font-size:11px;color:#a855f7;font-weight:700;margin-top:4px;text-align:right;">Registrations open — book now!</div>
+      </div>
+
+      <div style="height:0.5px;background:#eee;margin:12px 0;"></div>
+
+      <!-- Includes -->
+      <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#999;margin-bottom:8px;">Package Includes</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:16px;">
+        <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:#333;"><span style="width:6px;height:6px;border-radius:50%;background:#a855f7;display:inline-block;flex-shrink:0;"></span>AC Bus (Round Trip)</div>
+        <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:#333;"><span style="width:6px;height:6px;border-radius:50%;background:#a855f7;display:inline-block;flex-shrink:0;"></span>Chai × 2 Stops</div>
+        <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:#333;"><span style="width:6px;height:6px;border-radius:50%;background:#a855f7;display:inline-block;flex-shrink:0;"></span>Snacks × 2</div>
+        <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:#333;"><span style="width:6px;height:6px;border-radius:50%;background:#a855f7;display:inline-block;flex-shrink:0;"></span>Travel Insurance</div>
+        <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:#333;"><span style="width:6px;height:6px;border-radius:50%;background:#a855f7;display:inline-block;flex-shrink:0;"></span>Tour Coordinator</div>
+        <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:#333;"><span style="width:6px;height:6px;border-radius:50%;background:#a855f7;display:inline-block;flex-shrink:0;"></span>Bhajan Music</div>
+      </div>
+
+      <!-- CTA Button -->
+      <a href="https://indiadtravels.blogspot.com/2026/05/shree-khatu-shyam-ji.html"
+         target="_blank"
+         rel="noopener"
+         style="
+           display:block;
+           width:100%;
+           background:linear-gradient(135deg,#5b21b6,#7c3aed);
+           color:#fff;
+           text-align:center;
+           font-size:14px;
+           font-weight:700;
+           letter-spacing:2px;
+           text-transform:uppercase;
+           padding:14px;
+           border-radius:10px;
+           text-decoration:none;
+           margin-bottom:10px;
+           box-sizing:border-box;
+         ">
+        Book Your Seat →
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <div style="padding:8px 1.25rem 1.1rem;text-align:center;font-size:11px;color:#888;">
+      <div>📞 7080552397 &nbsp;|&nbsp; Pari Chowk, Greater Noida</div>
+      <div style="font-size:10px;opacity:0.6;margin-top:4px;letter-spacing:1px;">devesh-tripathi.in · DTRAVELS</div>
+    </div>
+  </div>
+</section>
+<!-- ===== END TOUR CARD ===== -->
   <div id="ks-b" style="position:fixed;top:0;left:0;right:0;z-index:99999;background:linear-gradient(90deg,#5C0000,#FF6B00,#5C0000);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:8px;box-shadow:0 3px 15px rgba(255,107,0,0.5)"><div style="color:#FFD700;font-size:13px;font-weight:700">🛕 Khatu Shyam Trip — 11 June | AC Bus | ₹999 | Limited Seats!</div><a href="https://wa.me/917080552397?text=Bhai%20Khatu%20Shyam%20trip%20book%20karni%20hai%20-%2011%20June%20-%20seats%20available%20hain%20kya?" style="background:#FFD700;color:#5C0000;padding:7px 14px;border-radius:20px;font-weight:800;font-size:12px;text-decoration:none;white-space:nowrap" target="_blank">Book Now 🙏</a><span onclick="this.parentElement.style.display='none'" style="color:rgba(255,255,255,0.6);cursor:pointer;font-size:18px">✕</span></div>
 
 <div id="loader">
